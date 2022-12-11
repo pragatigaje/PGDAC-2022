@@ -1,0 +1,416 @@
+Functional interface
+---------------------
+Interface having only one abstract method.
+
+interface MyInterface
+{
+	void myFun();
+}
+
+=========================================================
+
+Marker Interface
+-----------------
+Interface which contains no methods/constants. Used to add specific behaviour at runtime.
+
+interface MyInterface
+{
+}
+
+=========================================================
+class OuterClass
+{
+	class InnerClass
+	{
+	}
+}
+
+OuterClass can not access InnerClass data and methods.
+InnerClass can access OuterClass data and methods, even private data and methods also.
+
+OuterClass can have access specifier : public,default
+InnerClass can have access specifier : public,private,protected,default
+=========================================================
+
+interface MyInterface
+{
+	void fun1();
+	
+	class MyClass
+	{
+	}
+}
+
+
+MyInterface.MyClass mcls = new MyInterface.MyClass();
+
+=========================================================
+
+Object Cloning
+----------------
+
+To make a copy of any object. This cloning can be either shallow or deep cloning
+
+Cloneable interface is a marker interface.
+
+suppose we have to make a class named First as cloneable:
+
+class First
+{
+}
+
+Step 1: class First implements Cloneable
+Step 2: Override clone() method of the Object class inside First
+
+	super.clone();	//It will create a clone object of the current calling object and returns its 				//reference.
+Step 3: call the clone method for the object
+	First f2 = f1.clone();
+	
+
+Shallow Cloning : In the cloned object data and reference of the internal object.
+Deep cloning : Clones data as well as internal object also.
+
+
+==============================================================================
+Varargs
+-----------
+
+public static printAll(String str, int... vals)
+{
+        System.out.println(str);
+
+}
+
+public static void main(String args[])
+{
+        printAll("Hello",2,5,7,9,10);
+}
+
+int... vals is basically int vals[];
+
+int... vals => int []vals => int vals[] all are same.
+
+int vals[] = {2,3,5};
+int vals[] = new int[]{2,3,5};
+==============================================================================
+
+
+public static void main(String args[])
+{
+}
+
+==============================================================================
+
+Myth about java file name
+--------------------------
+
+java file name must be same as class name.
+java file name should be same as the class name in which main method exists.
+
+Rule is:
+-- When a java file contains more than one class and out of those classes if we make any class public in that case file name must be same as the public class name.
+-- A java file can have maximum only one public class and it is also possible that the java file contains no public class.
+
+But it is always better to follow the myth....
+
+==============================================================================
+
+ds1.color = "Blue"; //BLue, BLUE, blue  TShirtColors.Blue
+
+==============================================================================
+
+Regular expressions are also known as regex.
+It is used for searching/matching strings like valid email id, mobile no. etc.
+
++919878797687
+09878797687
+
+satish23@gmail.com
+
+[0-9] - Any character from 0 to 9;
+[a-z] - Any character from a to z
+[A-Z] - Any character form A to Z
+[0-9a-zA-Z] - Any character from 0 to 9 or a to z or A to Z
+.	- Any character except newline
+
+Repetitions
+? - 0 or 1 time
+* - 0 or many times
++ - 1 or many times
+
+| - OR
+() - group
+[^] - matches character not in bracket
+
+{n} - n times
+{n,} - n and more times
+{m,n} - m to n number of times
+
+
+Examples:
+
+Regex1 : [a-z]
+-------------------
+
+valid string
+a
+b
+d
+p
+
+Regex2 : [a-z]{2}
+---------------------
+ad
+cd
+pq
+rz
+
+
+Regex3 : [a-z]{2,4}
+-------------------
+ab
+ba
+aab
+bcb
+aabb
+
+Aab (invalid)
+
+Regex : [A-Za-z]{2}
+ab
+Aa
+aZ
+
+9A (invalid)
+
+Regex4 : [0-9a-zA-Z]{3}
+-------------------------
+9aA
+AB9
+abb
+AbA
+
+aaba (invalid)
+
+Regex : [2-47-9]{3}
+----------------------
+234
+433 
+123 (invalid)
+435 (invalid)
+789
+678 (invalid)
+
+---------------------
+(abc|cab|acd)	- either abc or cab or acd
+
+--------------------------
+
+(0|\\+91)[1-9][0-9]{9}
+"abc" - only string abc
+[abc] - either a or b or c
+--------------------------
+[0-5]+ - repetition will be either 1 or more times
+[abc] - either a or b or c
+[abc]+ - repetition will be either 1 or more times with a,b and c
+[b-g] - from b to g any character
+[b-gk] - from b to g any character and k
+
+Metacharacters: +,?,*,.,(,),{,},[,]
+
+"Welcome"
+
+System.out.println("\"Welcome\"");		//"Welcome"
+
+"\"Welcome\"" => Compiler => "Welcome" => jvm
+(0|\\+91)[1-9][0-9]{9} => Compiler => (0|\+91)[1-9][0-9]{9} => jvm
+
+----------------------------------------
+email id => gmail.com/yahoo.com
+
+example : satish_23@gmail.com
+
+[a-zA-Z][a-zA-Z0-9_\\-\\.]*@(gmail|yahoo)\\.com
+
+----------------------------------------
+[0-9]{3} => [\\d]{3}
+[^0-9] => [\\D]
+[a-zA-Z0-9] => [\\w]
+
+[^0-9] - Any character except 0 to 9
+[^0-9A-Z] - Any character except 0 to 9 and A to Z
+[^aA] - Any character except a and A
+
+-----------------------------
+Regex : "\\bxyz\\b";
+---------
+xyyz xyz xyz
+This is a sentence.
+^ab[c-e] => 3 character string and starting with ab
+[c-e]ab$ => 3 character string and ending with ab
+
+-----------------------------
+
+"abc"
+-----
+abc (only valid string)
+aadabcddabcdaabcd
+
+
+========================================================================
+
+Lambda expression provides implementation of functional interface. An interface which has only one abstract method is called functional interface. 
+
+Syntax:
+parameter -> expression body
+OR;
+(parameter list) -> {expression body}
+
+Example:
+
+import java.util.*;
+interface Increment
+{
+	int incrementBy(int num, int incByVal);
+}
+
+class LambdaExpDemo1
+{
+	public static void main(String args[])
+	{
+		Increment inc1 = (n,iv)-> n+iv;
+		int res = inc1.incrementBy(25,4);	//Lambda variable as an object
+		System.out.println("res = "+res);
+
+
+		//Lambda used with for each.
+		ArrayList <Integer> arrList = new ArrayList<>();
+		arrList.add(5);
+		arrList.add(10);
+		arrList.add(15);
+		arrList.add(20);
+		arrList.add(25);
+
+
+		arrList.forEach (i -> {System.out.println("List : "+i);}); //Lambda expression to iterate through collection
+
+
+	}
+}
+
+
+flist.forEach(ClassObject::nonStaticMethod);
+flist.forEach(ClassName::staticMethod);
+	
+
+
+
+MyInterface mif1 = (int x, int y) -> { System.out.println("Adding"); return x+y; };
+mif1.sum(7,8);
+mif1.sum(10,15);
+
+
+interface OneInterface
+{
+	void onefun(String s);
+}
+
+OneInterface oif1 = (String s) -> {System.out.println(s);};
+oif1.onefun("Welcome");		//will print welcome.
+
+interface HelloInterface
+{
+	void print(int val);		//Hello 5, Hello 6
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

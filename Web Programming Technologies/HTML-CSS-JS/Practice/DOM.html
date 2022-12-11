@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        #heading{
+            color: red;
+            background-color: black;
+            margin: 10px 20px;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        #info{
+            margin: 5px
+        }
+        #para1{
+            color: black;
+            background-color: bisque;
+            padding: 10px 20px;
+        }
+        #para2{
+            color: black;
+            background-color: pink;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <h3 id="heading">Nashik</h3>
+    <div id="info">
+        <p id="para1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit magnam aut, temporibus sed, adipisci deleniti illo doloremque dolorem cum quibusdam aliquam voluptatum illum, incidunt minima.</p>
+        <p id="para2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus perspiciatis ipsa iste deserunt ullam nostrum, eligendi nemo asperiores illum eos rem, veniam porro. Cumque temporibus, placeat unde animi, illum atque similique, neque veritatis libero saepe reprehenderit. Exercitationem excepturi rerum modi ratione aliquid, laboriosam animi quas sequi doloribus tenetur saepe repudiandae, vero consequatur!</p>
+    </div>
+
+    <script>
+        document.getElementById('para1').innerText="lorem"
+        var element = document.getElementById('para1').innerText;
+        console.log(element);
+    </script>
+</body>
+</html>

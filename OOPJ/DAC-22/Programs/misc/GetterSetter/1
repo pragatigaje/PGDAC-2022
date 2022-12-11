@@ -1,0 +1,19 @@
+class Employee
+{
+        private int empId;
+        private String name;
+
+        Employee()
+        {
+        }
+}
+
+class GetterSetterDemo
+{
+        public static void main(String args[])
+        {
+                Employee emp = new Employee();
+                emp.empId = 1;
+
+        }
+}      

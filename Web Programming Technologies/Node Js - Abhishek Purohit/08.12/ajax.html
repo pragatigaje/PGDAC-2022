@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+    <style>
+        span{
+            color: red;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h3>Ajax Tutorial</h3>
+    <p>process using which we can send a request and get a response from a server asynchronously</p>
+    <p>
+        1. create an object of XMLHttpRequest
+        <span>var xhr=new XMLHttpRequest()</span>
+    </p>
+    <p>
+        2. initialize the request 
+        mention the url
+        mention the request method 
+       GET POST PUT DELETE
+       <span>xhr.open(method,url)</span>
+    </p>
+    <p>
+        3. send the request
+       <span>xhr.send()</span>
+    </p>
+    <p>
+        4. get response from the server
+    </p>    
+    <p>
+        to recognize the current state of the request readyState property of xhr object has been introduced readyState will be an integer
+    </p>
+    <a href="https://www.tutorialrepublic.com/javascript-tutorial/javascript-ajax.php">tutorial link</a>
+</body>
+
+<script>
+    var xhr =new XMLHttpRequest();
+    xhr.open('GET', 'https://jsonplaceholder.typicode.com/users');
+    xhr.onreadystatechange=()=>{
+        if(xhr.readyState == 4){
+            var response = xhr.responseText;
+            var data=JSON.parse(response);
+            console.log(data);
+        }
+    }
+    xhr.send();
+</script>
+</html>

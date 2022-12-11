@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <h3>This object tutorial</h3>
+
+    
+</body>
+
+<script>
+    let person = {
+        fname: "Pragati",
+        lname:"Gaje",
+        age:21,
+        friends:["Pooja", "Sanjyot", "Mansi"],
+        salary : function(){
+            return 25000;
+        },
+        fullname : function(){
+            return this.fname+" "+this.lname;
+        },
+        living:{
+            'city': 'Nashik',
+            'Country': 'India'
+        }
+        
+    }
+    // document.write(person.fname);
+    // document.write(person.friends);
+    // document.write(person.college);
+    // document.write(person.salary());
+    // document.write(person.fullname());
+    // document.write(person.living.Country);
+
+</script>
+</html>

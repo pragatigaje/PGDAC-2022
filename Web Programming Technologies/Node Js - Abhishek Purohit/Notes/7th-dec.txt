@@ -1,0 +1,257 @@
+javascript: to execute logics on the website
+
+variables, if else , loops, arrays, operators, functions
+
+var let const
+
+function show(){
+		var x=7;
+
+}
+
+var: local as well as global
+let: block scoped
+const: 
+
+
+callback functions
+
+1. For javascript everything is an object 
+   number, string, bool, array, json, web page, window 
+   * : we can assign any object into any variable
+
+   a=[1,2,3,4,5,6]
+   b={id:101,name:'anuj',phone:'888111'}
+
+	note: functions are also considered as objects 
+   function show(){
+                console.log("hello world!");
+                return 5;
+            }
+
+            var a=show;
+            console.log(a);
+            a();
+
+> a function that is passed inside the argument of some another
+  function is known as callback function
+
+function show(x){
+                console.log("hello world!");
+                x();
+            }
+            function greet(){
+                console.log("good morning....");
+            }
+
+            show(greet);
+
+in above example greet will be referred as callback function
+
+
+
+> scenario:
+  we have a function that has to be passed inside the argument
+  then there is no need to give that function a name
+  and that function without name is an anonymous function 
+  function show(x){
+                console.log("hello world!");
+                x();
+            }
+            
+            
+
+            show(function(){
+                console.log("good morning....");
+            })
+
+var myFun=function(){
+                console.log("good morning....");
+            }
+            myFun();
+
+
+
+var a=[10,23,4,6,7,8,9,11,14];
+            a.forEach(function(item,i){
+                if (item%2==0) {
+                    console.log(item,i);
+                }
+                
+            });
+// forEach function will pick an array element and assign the value
+// in 1st arg and 2nd argument will be assigned by index number
+
+var a=[10,23,4,6,7,8,9,11,14];
+            
+          // filter out even numbers from array 
+          var b=a.filter(function(item){
+                return item%2==0;
+          });
+          console.log(b);
+          // inside filter function call we have to pass a callback function
+          // as argument and that callback function should return
+          // either true or false
+          // based on true or false elements will be filtered
+          // after filtering is done filter function will return a new array
+          // that array will contain only filtered elements
+// in js latest version there is one more way to define
+        // anonymous function and that is arrow function
+        function(){
+            // regular function
+        }
+
+        ()=>{
+			// arrow function
+        }
+
+var add=(a,b)=>{
+            return a+b;
+        }
+        
+        var c=add(7,4);
+        console.log(c);
+
+note: if arrow function is having only a single argument
+then we can remove paranthesis 
+
+var add = a =>{
+            return a+5;
+        }
+        
+        var c=add(3);
+        console.log(c);
+
+scenario:
+inside arrow function if there is single statement
+and that is too a return statement 
+> note: we can remove return keyword and we can remove the braces
+also
+
+var add = a => a+5;
+        
+        var c=add(3);
+        console.log(c);
+
+var add = (a,b) => a+b;
+        
+        var c=add(3,9);
+        console.log(c);
+
+
+var obj1={
+                a:1,
+                obj2:{
+                    a:2,
+                    show:()=>{
+                        console.log(this);
+                    }
+                }
+           }
+
+           obj1.obj2.show();
+
+        // regular function will have its own this 
+        // arrow function will not have its own this
+        // inside arrow function this keyword will refer to window object
+
+
+Node Js
+> node js is a javascript runtime environment 
+
+.html 
+browser: js engine
+google chrome: v8 engine
+
+node js is going to run js programs 
+
+using node js we can create our server 
+
+
+
+
+two ways to perform operations in js:
+1. synchronous: blocking nature 
+   p1 6 sec 
+   p2 10 sec
+	p3  4 sec
+    
+2. asynchronous: non blocking nature
+
+   p1  6 sec thread
+   p2  10 sec thread
+   p3  4 sec  thread
+
+   c=sum(3,5)
+	f=factorial(6)
+   power(9,3)
+
+   callback functions are required to make any process asynchronous 
+   function factorial(n) {
+    var f=1;
+    for (var i=1; i<=n; i++) {
+        f=f*i;
+    }
+    console.log(f);
+}
+
+function sum(a,b){
+    console.log("inside sum");
+    var sum=a+b;
+    console.log(sum);
+}
+// we want to make an illusion that this function is taking 3 seconds to
+// execute
+
+console.log("calculating factorial....");
+setTimeout(factorial,3000,5);
+setTimeout(sum,4000,5,8);
+console.log("after calculating factorial");
+
+
+note: to make multiple process dependent on each other we need to nest callback functions
+into one another 
+setTimeout(()=>{
+			setTimeout(()=>{
+			
+			},2000);
+},3000)
+
+setTimeout(() => {
+    var a=2;
+    var b=4;
+    var c = a+b;
+    console.log("sum is", c);
+    setTimeout(() => {
+        var f = 1;
+        for (var i = 1; i <= c; i++) {
+            f = f * i;
+        }
+        console.log("factorial is", f);
+    }, 2000);
+}, 4000);
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

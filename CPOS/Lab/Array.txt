@@ -1,0 +1,10 @@
+class Array{
+
+	public static void main(String args[]){
+	
+	int arr a[]= new int []{1,2,3,4};
+	
+	
+	}
+
+}

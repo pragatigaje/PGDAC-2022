@@ -1,0 +1,24 @@
+Basic
+familliar with java, linux programming
+How i desribe myself
+
+
+
+--max no of class in prgm
+-main method significance
+-main method arguments
+-how many classes cand be made public
+
+-diff bet obj and ref
+-features of java
+-platform
+-why cannot say java pure oopj
+-what is jre
+
+
+
+-normalization
+-types of keys
+-commit and roll back
+-diif bet fun and proc
+-proc using 11

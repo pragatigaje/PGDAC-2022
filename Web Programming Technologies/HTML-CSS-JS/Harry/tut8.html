@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h3>ERP Form</h3>
+    <form action="backend.php">
+        <label for="name">Name</label>
+        <div>
+            <input type="text" name="myName" id="name">
+        </div>
+        <br>
+        <div>
+            <label for="mail">Email</label>
+            <input type="email" name="myEmail" id="mail">
+        </div>
+        <br>
+        <div>
+            Roll No : <input type="text" name="myRoll">
+        </div>
+        <br>
+        <div>
+           Gender: Male <input type="radio" name="myGender"> Female <input type="radio" name="myGender">
+        </div>
+        <br>
+        <div>
+            <label for="myEligibility">Have you apeared for CCAT?</label>
+            <input type="checkbox" name="myEligibility" unchecked>
+        </div>
+        <br>
+        <div>
+            <label for="rank"> Mention your CCAT Rank</label>
+           <input type="number" name="myRank" id="rank">
+        </div>
+        <br>
+        <div>
+            <label for="course">Select your Course</label>
+            <select name="myCourse" id="course">
+                <option value="dac">PG-DAC</option>
+                <option value="dbda">PG-DBDA</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="center">Select your Center</label>
+            <select name="myCenter" id="center">
+                <option value="Kharghar">Kharghar</option>
+                <option value="Juhu" selected>Juhu</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Submit Now">
+            <input type="reset" value="Reset Now">
+        </div>
+        <br>
+    </form>
+</body>
+</html>

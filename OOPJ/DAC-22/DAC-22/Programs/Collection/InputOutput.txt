@@ -1,0 +1,25 @@
+Byte Stream
+===================
+InputStream
+OutputStream
+
+
+Character Stream
+===================
+Reader
+Writer
+
+
+File class:
+This class is not used to do any read/write operation directly. It is just used to give information about files/folders.
+
+In java folder is also considered as File object.
+
+new File(filepath);
+new File(directorypath);
+
+int read() throws IOException
+
+
+FileInputStream : To read from the File
+FileOutputStream : To write to the File

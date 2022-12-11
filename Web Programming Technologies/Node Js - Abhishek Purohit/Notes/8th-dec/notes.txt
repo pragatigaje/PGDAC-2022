@@ -1,0 +1,307 @@
+callback hell
+Promise has been introduced to avoid callback hell 
+
+eg: You have made a promise to your friend that tomorrow at 11am
+you will give him/her a treat 
+
+till 11 am of next day promise will be in pending state
+
+now it is 11 am of the next 
+at this same moment the promise will be executed
+
+1. either promise has been fulfilled (if task has been successfully
+completed)
+
+2. or promise has been rejected (if there is an error while
+performing any task)
+
+
+Promise will have 3 states:
+1. resolved
+2. rejected
+3. pending 
+
+
+Based on promise state we can take suitable actions
+p1
+p2
+p3
+
+
+> we just have to create a promise for any task
+  when we are creating a promise, its the developer's responsibility
+  to resolve or to reject the promise 
+
+> after creation we have to execute the promise
+
+> after execution, promise state will become either resolved or rejected
+
+> Based on promise state we can take suitable actions
+  we have to handle the promise 
+
+Student s=new Student();
+
+return new Promise((resolve,reject)=>{
+	
+}); 
+
+> note: Promise constructor will take a callback function 
+as argument and that callback function will contain 
+the statements that we have to execute for the promise
+we need to write whole logic inside the callback function
+this callback is known as promise executor function
+
+executor function will have access to the promise states i.e.
+resolve and reject 
+
+eg: I am promising that every number is going to be an even 
+number 
+
+
+
+var evenPromise=new Promise((resolve,reject)=>{
+	var n=6;
+	if(n%2==0){
+		resolve();
+	}
+	else{
+		reject();
+	}
+});
+
+two function to handle the promise
+
+then() -> when promise is resolved
+catch() -> when promise is rejected
+
+var evenPromise=new Promise((resolve,reject)=>{
+	var n=7;
+	if(n%2==0){
+		resolve();
+	}
+	else{
+		reject();
+	}
+});
+
+evenPromise
+.then(()=>{
+    console.log("Promise is resolved and number is even");
+}).catch(()=>{
+    console.log("OOOPS! Promise is rejected and number is not even");
+});
+
+
+function average(...x){
+
+} 
+
+average(5,6,7);
+average(9,2);
+average();
+
+console.log(1,2)
+
+function checkEven(n){
+    return new Promise((resolve,reject)=>{
+        if(n%2==0){
+            resolve([10,20,30,40]);
+        }
+        else{
+            reject("OOOPS! Promise is rejected and number is not even");
+        }
+    });
+   
+}
+
+checkEven(7)
+.then((result)=>{
+    console.log(result);
+}).catch((error)=>{
+    console.log(error);
+});
+
+
+
+
+
+function sum(a, b) {
+    return new Promise((resolve, reject) => {
+        console.log("finding sum...");
+        setTimeout(() => {
+            resolve(a + b)
+        }, 4000)
+    });
+}
+
+function factorial(n) {
+    return new Promise((resolve, reject) => {
+        console.log("finding factorial...");
+        setTimeout(() => {
+            var f = 1;
+            for (var i = 1; i <= n; i++) {
+                f = f * i;
+            }
+            resolve(f);
+        }, 2000);
+    });
+}
+
+function cube(n){
+    return new Promise((resolve,reject)=>{
+        console.log("finding cube...");
+        setTimeout(()=>{
+            var c=n*n*n;
+            resolve(c);
+        }, 3000);
+    });
+}
+sum(2,4)
+.then((c) => {
+    console.log("sum is", c);
+    return factorial(c);
+})
+.then((f)=>{
+    console.log("factorial is", f);
+    return cube(f);
+})
+.then((cubeValue)=>{
+    console.log("cube is", cubeValue);
+})
+.catch((error)=>{
+    console.log(error);
+});
+
+
+read data from database -> async
+write that data into a file -> async
+send a successful response
+
+fetchData()
+.then((data)=>{
+	return writeFile(data);	
+})
+.then(()=>{
+	sendResponse();
+})
+
+fetch()
+
+
+
+there are two ways to handle the promise:
+1. then() catch()
+2. async await: async and await are the keywords 
+   > await keyword must be placed inside a function body
+     (we can't write await keyword outside any function body) 
+   
+
+
+function sum(a, b) {
+    return new Promise((resolve, reject) => {
+        console.log("finding sum...");
+        setTimeout(() => {
+            resolve(a + b)
+        }, 4000)
+    });
+}
+
+function factorial(n) {
+    return new Promise((resolve, reject) => {
+        console.log("finding factorial...");
+        setTimeout(() => {
+            var f = 1;
+            for (var i = 1; i <= n; i++) {
+                f = f * i;
+            }
+            resolve(f);
+        }, 2000);
+    });
+}
+
+function cube(n){
+    return new Promise((resolve,reject)=>{
+        console.log("finding cube...");
+        setTimeout(()=>{
+            var c=n*n*n;
+            resolve(c);
+        }, 3000);
+    });
+}
+async function handlePromise(){
+    try {
+        var result=await sum(2,4);// await will return the value which is passed inside the resolve
+        console.log("sum is",result);
+        var f=await factorial(result);
+        console.log("factorial is",f);
+        var c=await cube(f);
+        console.log("cube is",c);
+    } catch (error) {
+        console.log(error);
+    }
+}
+handlePromise();
+// sum(2,4)
+// .then((c) => {
+//     console.log("sum is", c);
+//     return factorial(c);
+// })
+// .then((f)=>{
+//     console.log("factorial is", f);
+//     return cube(f);
+// })
+// .then((cubeValue)=>{
+//     console.log("cube is", cubeValue);
+// })
+// .catch((error)=>{
+//     console.log(error);
+// });
+
+
+
+
+Promise.all()
+Promise.any()
+Promise.race()
+
+
+
+
+AJAX:
+process using which we can send a request and get a response
+from a server asynchronously 
+
+1. create an object of XMLHttpRequest
+	var xhr=new XMLHttpRequest()
+
+
+2. initialize the request 
+	mention the url
+	mention the request method 
+   GET POST PUT DELETE 
+	
+	xhr.open(method,url)
+
+3. send the request
+   xhr.send()
+
+4. get response from the server
+
+to recognize the current state of the request 
+readyState property of xhr object has been introduced
+readyState will be an integer
+
+
+https://www.tutorialrepublic.com/javascript-tutorial/javascript-ajax.php
+
+
+
+
+
+
+
+
+
+
+ 
+

@@ -1,0 +1,10 @@
+Class M1{
+	public static void main{
+	
+	int i;
+	for( int i=44; i<47 ; i++);
+	{
+		System.out.println(i);
+	}
+	} 
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <style>
+        div{
+            display: block;
+            margin: auto;
+            position: absolute;
+            left: 50%;
+        }
+        button{
+            color: white;
+            background-color: black;
+            padding: 5px 10px;
+            margin: auto;
+            
+        }
+
+        p{
+            display: block;
+            background-color: tan;
+            width: 60%;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>This is Lorem Paragraph</h3>
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur nemo cupiditate voluptatem aut recusandae harum, optio ex, repellendus tempora mollitia unde. Officia minima nesciunt corporis!</p>
+    <div>
+        <button id="btnon" onclick="show()">Show</button>
+        <button id="btnoff"onclick="hide()">Hide</button>        
+    </div>
+</body>
+
+<script>
+    function show(){
+        let btnon= document.getElementById('btnon');
+        let btnoff = document.getElementById('btnoff');
+        let para = document.getElementById('para');
+        if(para.style.display= 'none'){
+            para.style.display='block';
+        }
+    }
+    function hide(){
+        let btnon= document.getElementById('btnon');
+        let btnoff = document.getElementById('btnoff');
+        let para = document.getElementById('para');
+        if(para.style.display!= 'none'){
+            para.style.display='none';
+        }
+    }
+</script>
+</html>

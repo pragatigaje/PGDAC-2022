@@ -1,0 +1,444 @@
+Generics
+----------
+
+void add(int a, int b)
+{
+	int res = a + b;
+	System.out.println(res);
+}
+
+void add(double a, double b)
+{
+	double res = a + b;
+	System.out.println(res);
+}
+
+-- Generics is used to define the classes and methods which will work with different type of data/objects.
+-- Generics does not work with primitive data. It only works with class types/objects.
+-- It is also known as parameterized type.
+
+-- Non-generic TwoNumbers class
+
+class TwoNumbers
+{
+	int a;
+	int b;
+	
+	TwoNumbers(int a, int b)
+	{
+		this.a = a;
+		this.b = b;
+	}
+	
+	int sum()
+	{
+		int res = a + b;
+		return res;
+	}
+}
+
+class TwoNumbersDemo
+{
+	public static void main(String args[])
+	{
+		TwoNumber tn1 = new TwoNumbers(5,10);
+		int res = tn1.sum();
+		System.out.println(res);
+	}
+}
+
+
+-- Generic TwoNumbers class
+
+class TwoNumbers <T extends Number>
+{
+	T a;
+	T b;
+	
+	TwoNumbers(T a, T b)
+	{
+		this.a = a;
+		this.b = b;
+	}
+	
+	double sum()
+	{
+		double res = a.doubledataue() + b.doubledataue();
+		return res;
+	}
+}
+
+class TwoNumbersDemo
+{
+	public static void main(String args[])
+	{
+		TwoNumbers<Integer>  tn1 = new TwoNumbers<Integer>(5,10);
+		double res = tn1.sum();
+		System.out.println(res);
+		
+		TwoNumbers<Double>  tn2 = new TwoNumbers<Double>(15.5,20.8);
+		res = tn2.sum();
+		System.out.println(res);
+	}
+}
+
+OUTPUT:
+15.0
+36.3
+
+==========================================================================
+
+
+class MyGen<T>		//similar to => class MyGen <T extends Object>
+{
+	T data;
+	
+	void setData(T data)
+	{
+		this.data = data;
+	}
+	
+	T getData()
+	{
+		return data;
+	}
+}
+
+
+class MyGenDemo
+{
+	public static void main(String args[])
+	{
+		MyGen<Integer> mg1 = new MyGen<Integer>();
+		mg1.setData(5);
+		int a = mg1.getData();		//int = Integer
+		System.out.println(a);
+		
+		MyGen<String> mg2 = new MyGen<String>();
+		mg2.setData("Welcome");
+		String s = mg2.getData();
+		System.out.println(s);
+	}
+}
+
+OUTPUT:
+5
+Welcome
+
+========================================================================
+
+Integer iobj1 = 10;
+Integer iobj2 = 10;
+
+Integer iobj3 = new Integer(10);
+
+iobj1 == iobj2;		//true
+iobj1 == iobj3;		//false
+
+==========================================================================
+
+class MyNonGen
+{
+	private Object data;
+	
+	void setData(Object data)
+	{
+		this.data = data;
+	}
+	
+	Object getData()
+	{
+		return data;
+	}
+}
+
+
+class MyNonGenDemo
+{
+	public static void main(String args[])
+	{
+		MyNonGen mg1 = new MyNonGen();
+		mg1.setData(5);			//Object data = new Integer(5);	
+		int a = (Integer)(mg1.getData());//Integer = Object; child = parent
+		System.out.println(a);
+		
+		MyNonGen mg2 = new MyNonGen();
+		mg2.setData("Welcome");		//Object data = "Welcome"
+		String s = (String)(mg2.getData());	//String = Object; child = parent
+		System.out.println(s);
+		
+		mg1 = mg2;			//No type safety
+	}
+}
+
+OUTPUT:
+5
+Welcome
+=============================================================================
+Generic implementation does not require explicit typecasting.
+Generic implementation also has type safety feature.
+
+That is why Generic implementation is better than non-generic implementation
+==============================================================================
+
+The parameterized type T is replaced at the compile time by the upper bound (if we don't take anything then it is Object class) by the compiler at the time of compilation itself and hence T does not exist at runtime. So there is no type info at run time. Compiler does the typecasting and other works for us internally and all type info are erased. This process is also known as Type Erasure. So, there is only one version of the generic class at the runtime.
+
+==============================================================================
+Following is fine:
+
+class Demo <T1,T2>
+{
+	T1 a;
+	T2 b;
+	double d;
+	
+	Demo()
+	{
+	}
+	
+	Demo(T1 a, T2 b, double d)
+	{
+		this.a = a;
+		this.b = b;
+		this.d = d;
+	}
+}
+
+class GenDemo
+{
+	public static void main(String args[])
+	{
+			Demo<Integer,Double> d1 = new Demo<Integer,Double>(10,25.6,15.0);
+			//Demo<Integer,Double> d1 = new Demo<>(10,25.6,15.0);	//It is also OK
+	}
+}
+
+==================================================================
+	
+class Demo<T>
+{
+	<T1> void fun1(T1 data)
+	{
+	}
+	
+	void fun2(int a)
+	{
+	}
+}
+
+=========================================================================================
+
+class Demo<T>
+{
+	void fun1(Demo<T> d)	//Type of object i.e the object whose reference is getting stored in d, should 					//be same as calling object type
+	{
+		System.out.println(d);
+	}
+	
+	void fun2(Demo<?> d)	//Type of object can be any valid type of Demo.
+	{
+		System.out.println(d);
+	}
+	
+	void fun3(Demo<? extends Number> d)	//Type of object can be any valid type of Demo whose Type 						//parameter is either Number or child class of Number.
+	{
+		System.out.println(d);
+	}
+}
+
+class GenDemo1
+{
+	public static void main(String args[])
+	{Demo<Integer>
+		Demo<Integer> d1 = new Demo<Integer>();
+		Demo<Double> d2 = new Demo<Double>();
+		Demo<String> d3 = new Demo<String>();
+		Demo<Integer> d4 = new Demo<Integer>();
+		
+		//d1.fun1(d2);		//Error, calling object d1's type Demo<Integer> whereas d2's type is 						//Demo<Double>
+		d1.fun1(d4);		//OK
+		
+		d1.fun2(d2);		//OK
+		d1.fun2(d3);		//OK
+		
+		d1.fun3(d3);		//Error
+		d1.fun3(d2);		//OK		
+		
+		
+	}
+}
+
+=========================================================================================
+
+Generic Interfaces
+-----------------------
+
+interface MyInterface <T>
+{
+	void myFun(T a);
+}
+
+class Demo<T> implements MyInterface <T>
+{
+	void myFun(T a)
+	{
+		System.out.println(a);
+	}
+}
+
+-- Implementing class can be generic or can not be generic.
+	- class Demo<T> implements MyInterface<T>		//class is also generic here
+	- class Demo implements MyInterface<String>		//class Demo is non-generic
+	
+	class Demo implements MyInterface<String>
+	{
+		void myFun(String a)
+		{
+			System.out.println(a);
+		}
+	}
+
+============================================================
+
+interface MyInterface <T extends Number>
+{
+	void myFun(T a);
+}
+
+class Demo<T extends Number> implements MyInterface <T>		//generic Demo class
+{
+	void myFun(T a)
+	{
+		System.out.println(a);
+	}
+}
+
+OR;
+
+class Demo implements MyInterface <Double>			//non-generic Demo class
+{
+	void myFun(Double a)
+	{
+		System.out.println(a);
+	}
+}
+
+
+======================================================
+
+case 1: void fun3(Demo<? extends First> d)	//Type of object can be any valid type of Demo whose Type 					//parameter is either First or child class of First.
+
+case 2: void fun3(Demo<? super First> d)	//Type of object can be any valid type of Demo whose Type 					//parameter can be only the parent class of First.
+
+
+MyMainClass <-------- MyClass <------ First <------------- Second
+
+case 1 (valid input object type) : Demo<First>, Demo<Second>
+case 2 (valid input object type) : Demo<MyClass>, Demo<MyMainClass>
+
+=====================================================================================
+
+
+class MyClass<T>
+{
+	void myFun(T a)
+	{
+		//code
+	}
+}
+
+class First<T> extends MyClass<T>	//generic First class 
+{
+}
+
+OR;
+class First extends MyClass<String>	//Non-generic First class
+{
+}
+
+===================================================================================
+
+class MyGen<T>		//similar to => class MyGen <T extends Object>
+{
+	T data;
+	
+	void setData(T data)
+	{
+		this.data = data;
+	}
+	
+	T getData()
+	{
+		return data;
+	}
+}
+
+
+class MyGenDemo
+{
+	public static void main(String args[])
+	{
+		MyGen<Integer> mg1 = new MyGen<Integer>();
+		mg1.setData(5);
+		int a = mg1.getData();		//int = Integer
+		System.out.println(a);
+		
+		MyGen<String> mg2 = new MyGen<String>();
+		mg2.setData("Welcome");
+		String s = mg2.getData();
+		System.out.println(s);
+		
+		mg1 = mg2;
+	}
+}
+
+
+The above code will be converted as below
+
+class MyGen
+{
+	Object data;
+	
+	void setData(Object data)
+	{
+		this.data = data;
+	}
+	
+	Object getData()
+	{
+		return data;
+	}
+}
+
+
+class MyGenDemo
+{
+	public static void main(String args[])
+	{
+		MyGen mg1 = new MyGen();
+		mg1.setData(5);
+		int a = (Integer) (mg1.getData());		
+		System.out.println(a);
+		
+		MyGen mg2 = new MyGen();
+		mg2.setData("Welcome");
+		String s = (String) (mg2.getData());
+		System.out.println(s);
+	}
+}
+
+================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+

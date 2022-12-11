@@ -1,0 +1,367 @@
+String are basically sequence of charachters.
+String literals are kept always inside double quote. Ex. "Hello", "Welcome" etc.
+
+String s1 = "Welcome";
+String s2 = new String("Welcome");
+
+System.out.println(s1);	//prints Welcome
+System.out.println(s2);	//prints Welcome
+
+
+String Constant Pool
+--------------------
+
+String s1 = "Welcome"; //Occupies memory in constant pool
+
+String s2 = new String("Welcome"); //Occupies memory in heap area.
+
+String s3 = "Welcome";
+
+String s4 = new String("Welcome");
+
+In constant pool, there is no duplicate string but in heap there can be duplicate string. 
+
+Each time we use 'new' for creating String object, fresh memory space will be occupied in the heap.
+
+s1 == s3; //will return true
+s2 == s4; //will return false
+
+s1 == s2; //will return false
+
+
+String class overrides the equals method and does the deep comparison.
+
+s1.equals(s3);	//true
+s2.equals(s4);	//true
+s1.equals(s2);	//true
+
+===========================================================================
+
+Integer iobj = 100;		//constant pool
+integer iobj1 = 100;		//constant pool
+Integer iobj2 = new Integer(100);	//heap memory
+Integer iobj3 = new Integer(100);	//heap memory
+
+System.out.println(iobj == iobj1);	//true
+System.out.println(iobj == iobj2);	//false
+System.out.println(iobj2 == iobj3);	//false
+
+============================================================================
+
+Immutable => Which can not be changed.
+Mutable => Which can be changed.
+
+String is immutable.
+
+String s1 = "welcome ";
+s1.concat("Friends"); //It will not change the string "welcome " instead it will create a new string "welcome friends"
+
+System.out.println(s1);	//will print welcome
+
+============================================================================
+
+System.out.println("s1.charAt(3) returns : "+s1[3]); //Error, can not access like s[3]
+System.out.println("s1.charAt(3) returns : "+s1.charAt(3)); // returns character 'c'
+
+============================================================================
+
+Q. Print the number of occurences of each character in a given string.
+
+welcome
+w - 1
+e - 2
+l - 1
+c - 1
+o - 1
+m - 1
+
+
+abccaab
+
+a - 3
+b - 2
+c - 2
+============================================================================
+
+for-each loop
+---------------
+
+class Demo
+{
+	int a;
+	int b;
+	
+	Demo()
+	{
+	}
+	
+	Demo(int a, int b)
+	{
+		this.a = a;
+		this.b = b;
+	}
+	
+	public String toString()
+	{
+		return "[a = " + a + ", b = " + b + "]";
+	}
+	
+	public void fun()
+	{
+		System.out.println("fun of Demo");
+	}
+	
+}
+
+class ForEachDemo
+{
+	public static void main(String []args)
+	{
+		int arr[] = {5,10,15,20,25};
+		
+		System.out.println("Print array using normal for loop");
+		for(int i = 0; i < arr.length; i++)
+		{
+			System.out.println(arr[i]);
+		}
+		
+		System.out.println("Print array using for-each loop");
+		
+		for(int x : arr)
+		{
+			System.out.println(x);
+		}
+		
+		
+		Demo d[] = new Demo[3];
+		d[0] = new Demo(5,10);
+		d[1] = new Demo(12,15);
+		d[2] = new Demo(17,20);
+		
+		for(Demo x : d)
+		{
+			System.out.println(x);
+			x.fun();
+		}		
+	}
+}
+
+OUTPUT:
+Print array using normal for loop
+5
+10
+15
+20
+25
+Print array using for-each loop
+5
+10
+15
+20
+25
+[a = 5, b = 10]
+fun of Demo
+[a = 12, b = 15]
+fun of Demo
+[a = 17, b = 20]
+fun of Demo
+
+======================================================================
+
+String str5 = "WelCoMe";
+String str6 = "welcOmE";
+
+str5.equals(str6);		//false, as equals consider the case i.e. upper case & lower case also.
+str5.equalsIgnoreCase(str6); //true, as equalsIgnoreCase() ignores the case  i.e. upper case & lower case.
+str5.equalsIgnoreCase("welcome");	//true
+
+========================================================================
+
+String str7 = "welcome";
+
+Substrings:
+
+w
+e
+l
+c
+o
+m
+e
+
+we
+el
+lc
+co
+om
+me
+
+wc is not a substring.
+
+continue characters we have to pick for substring.
+
+
+wlc is not a substring of "welcome"
+lcom is a substring of "welcome" 
+
+"welcome".indexOf('e'); //Return 1 i.e. as it gets first occurence it will return the index of the same.
+
+String s8 = "welcome";
+s8.indexOf('e');
+
+int res = s8.indexOf("com");	//Return 3
+int res = s8.indexOf("cme");	//Return -1
+
+indexOf() returns -1 if the given substring is not found in the string.
+
+
+Lab:
+Entery an String : Rajkumar Sinha
+Enter substring to search : kumar
+Yes, substring found in the given string.
+
+============================================================
+
+"welcome".contains("com");	//true
+"welcome".contains("cme");	//false
+
+============================================================
+
+" ".isEmpty();			//false, as space character is there 
+"".isEmpty();			//true
+
+String.join("/","13","10","2022"); //will return 13/10/2022
+
+================================================================
+
+class StringDemo
+{
+	public static void main(String args[])
+	{
+		String s1 = "welcome";
+		String s2 = new String("welcome");
+		String s3 = "welcome";
+		String s4 = new String("welcome");
+
+		//boolean b = (s1 == s2);
+		//System.out.println(b);
+
+		System.out.println("s1 == s2 returns " + (s1 == s2));	//false
+		System.out.println("s1 == s3 returns " + (s1 == s3));	//true
+		System.out.println("s3 == s4 returns " + (s3 == s4));	//false
+
+		System.out.println("s1.equals(s2) returns " + s1.equals(s2));
+		System.out.println("s1.equals(s3) returns " + s1.equals(s3));
+		System.out.println("s3.equals(s4) returns " + s3.equals(s4));
+
+		char ch = s1.charAt(3);
+
+		System.out.println("s1.charAt(0) returns : "+s1.charAt(0));
+
+		char chr[] = new char[10];
+
+		s1.getChars(2,5,chr,2);
+
+		for(int i = 0 ; i < chr.length; i++)
+		{
+			System.out.print(chr[i]);
+		}
+		System.out.println();
+
+		System.out.println("\nOutput No ==> 1\n");
+
+		byte [] b = s1.getBytes();
+
+		for(byte x : b)
+		{
+			System.out.println(x);
+		}
+
+		System.out.println("\nOutput No ==> 2\n");
+		String s5 = "WElcoMe";
+		String s6 = "welComE";
+
+		System.out.println("s5.equals(s6) returns : " + s5.equals(s6));		//false
+		System.out.println("s5.equalsIgnoreCase(s6) returns : " + s5.equalsIgnoreCase(s6));//true
+
+		System.out.println("\nOutput No ==> 3");
+		char charr[] = s1.toCharArray();
+
+		for(int i = 0; i < charr.length; i++)
+		{
+			System.out.println(charr[i]);
+		}
+		
+		System.out.println("\nOutput No ==> 4");
+		String s7 ="ABACDD";
+		String s8 = "ABAACC";
+		
+		System.out.println("s7.compareTo(s8) returns : " + s7.compareTo(s8));
+		
+		String s9 = s1.substring(3);
+		System.out.println("s1.substring(3) : "+s9);
+		
+		System.out.println("s1.indexOf(\"cme\") : "+ s1.indexOf("cme"));
+		System.out.println("s1.contains(\"com\") : "+ s1.contains("com"));
+		
+		String s10 = "";
+		System.out.println("s10.isEmpty() returns : "+s10.isEmpty());
+		
+		System.out.println(String.join("/","13","10","2022"));
+		
+		
+
+	}
+}
+
+==================================================================================
+
+
+StringBuffer is mutable but String is immutable.
+
+StringBuffer s1 = "Welcome"; //Error, not allowes direct initialization.
+
+To create StringBuffer object we must have to use 'new' keyword.
+
+=================================================================================
+
+class StringBufferDemo
+{
+	public static void main(String args[])
+	{
+		//StringBuffer s1 = "Welcome";
+		StringBuffer s1 = new StringBuffer("Welcome");
+		System.out.println(s1);
+		s1.append(" Friends");
+		System.out.println(s1);
+		
+		StringBuffer s2 = new StringBuffer();			//s2 capacity 16
+		System.out.println("s2 capacity: "+s2.capacity());
+		
+		StringBuffer s3 = new StringBuffer("12345");		//s3 capacity 21
+		System.out.println("s3 capacity: "+s3.capacity());
+		
+		s2.append("1234");					//still s2 capacity 16	
+		System.out.println("s2 capacity: "+s2.capacity());
+		
+		s2.append("123456789012");				//still s2 capacity 16 but full
+		System.out.println("s2 capacity: "+s2.capacity());
+		
+		s2.append("1");						//new capacity = 16 * 2 + 2 = 34
+		System.out.println("s2 capacity: "+s2.capacity());
+		
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

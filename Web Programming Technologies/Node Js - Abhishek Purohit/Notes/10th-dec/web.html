@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container text-center mt-4">
+        <div class="alert alert-primary" role="alert">
+            Welcome to our news application
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="mb-3">
+                    <label for="topic" class="form-label">Topic</label>
+                    <input type="text" class="form-control" placeholder="Enter topic" id="topic">
+                </div>
+                <input type="button" value="Fetch News" class="btn btn-success" onclick="handleFetchNewsClick()">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" id="news-container">
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script>
+        function fetchNews(topic){
+            var xhr=new XMLHttpRequest();
+            xhr.open('GET',`https://newsdata.io/api/1/news?apikey=pub_14381c7c5b39cc33f27c2218694ac9419a078&country=in&category=${topic}`);
+            xhr.onreadystatechange = ()=>{
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var data=JSON.parse(xhr.responseText);
+                    console.log(data.results);
+                    var newsContainer=document.getElementById('news-container');
+                    newsContainer.innerHTML = "";
+                    for(i=0; i<data.results.length; i++) {
+                        var col=document.createElement('div');
+                        col.setAttribute('class', 'col-lg-4 mt-4 mb-4');
+                        var card=document.createElement('div');
+                        card.setAttribute('class', 'card');
+                        if (data.results[i].image_url) {
+                            var img=document.createElement('img');
+                            img.setAttribute('src', data.results[i].image_url);
+                            img.setAttribute('class','card-img-top');
+                            card.appendChild(img);
+                        }
+                        var cardBody=document.createElement('div');
+                        cardBody.setAttribute('class', 'card-body');
+                        var h5=document.createElement('h5');
+                        h5.setAttribute('class', 'card-title');
+                        h5.innerHTML= data.results[i].title;
+                        cardBody.appendChild(h5);
+                        var p=document.createElement('p');
+                        p.setAttribute('class', 'card-text');
+                        p.innerHTML= data.results[i].description;
+                        cardBody.appendChild(p);
+                        card.appendChild(cardBody);
+                        col.appendChild(card)
+                        newsContainer.appendChild(col);
+
+                    }
+                }
+            }
+            xhr.send();
+        }
+        fetchNews('entertainment');
+
+        function handleFetchNewsClick() {
+            var inputField=document.getElementById('topic');
+            var topic=inputField.value;
+            fetchNews(topic);
+        }
+    </script>
+</body>
+</html>

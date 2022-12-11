@@ -1,0 +1,179 @@
+Thread th1 = Thread.currentThread();		//Returns object of the current running thread.
+th1.getName();					//Will return the current running thread name.
+
+OR;
+
+Thread.currentThread().getName();		//Will return the current running thread name.
+
+
+Each thread in java is an object.
+
+run() : Method is very important as it is the starting point of each thread execution.
+start() : Thread class method is used to start the thread.
+
+when a thread is started using start() method, its corresponding run() method gets executed. When task within run() method is completed, thread stops its execution. So, we can say the task related to the thread is given inside the run method.
+
+main()		//Main thread
+{
+mth1.join() ; //Main thread says : I will wait for mth1 to complete its task and join me.
+}
+
+
+thread1 (is running)
+{
+	thread2.join();		//thread1 will wait for thread2 to complete its task then only thread1 will 					//proceed further.
+}
+
+
+sleep() : Static method of Thread class which takes current running thread to sleep/idle mode for the specified time period.
+
+ex:
+sleep(1000);	//Thread will sleep for 1 second; 
+
+1 second = 1000 ms
+
+
+===================================================================
+
+
+
+class MyThread extends Thread
+{
+	public void run()
+	{
+		//code
+	}
+}
+
+MyThread mth1 = new MyThread();
+mth1.start();
+
+
+
+-------------------------------------------
+
+class MyThread implements Runnable
+{
+	Thread t;
+	
+	MyThread()
+	{
+		t = new Thread(this);
+	}
+	
+	public void run()
+	{
+		//code
+	}
+}
+
+MyThread mth1 = new MyThread();
+mth1.t.start();
+
+------------------------------------------
+
+Advantage of using Runnable over Thread class
+
+Using Runnable we can extend any other class but while using Thread we can not extend any other class.
+
+------------------------------------------
+
+Synchronization
+----------------
+1. Synchronized Method
+2. Synchronized Statement/Block
+
+
+Thread is using a resource. => Thread has occupied or using an object.
+
+Whenever we think about synchronization, keep single object(resource) of the same class in your mind which is being shared among multiple threads.
+
+For synchronized method, only one thread at a time can acquire lock/monitor/semaphore for an object to use that method and at that time no other thread will be allowed to use any synchronized method for that object. However at the same time other threads can access other non-synchronized methods on the same object.
+
+
+
+class StringPrint
+{
+	void print()	//Non-synchronized method
+	{
+		//code
+	}
+}
+
+class StringPrint
+{
+	synchronized void print()	//Synchronized method
+	{
+		//code
+	}
+}
+
+--------------------------------------------
+
+class Demo
+{
+	synchronized void fun1()
+	{
+	}
+	
+	synchronized void fun2()
+	{
+	}
+	
+	void fun3()
+	{
+	}
+}
+
+
+Three threads running : th1, th2, th3
+One object of Demo : dobj
+
+suppose th1 calls fun1() using dobj as below:
+
+th1 => dobj.fun1();	//Thread1 has acquired the lock/monitor over dobj
+
+Parallely what can happen now:
+
+th2 and th3 will not be able to call/use method fun1() and fun2() using the same object i.e. dobj.
+but th2 and th3 will be able to call/use method fun3() using the same object i.e. dobj.
+
+
+Acquiring Lock : Means a thread has entered the synchronized method/block using an object then we say that the thread has acquired the lock/monitor for the object and when it comes out of the synchronized method/block then we say that thread has released the lock/monitor. Now other thread can acquire the lock using the same object and can use the synchronized method/block.
+
+--------------------------------------------
+
+Producer Consumer Problem:
+--------------------------
+wait() : Current running thread goes in waiting state.
+notify() : Will notify the waiting thread which has called wait() last
+notifyAll() : Will notify all the waiting threads
+
+All the above three methods are of Object class' final methods so it can not be overridden.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

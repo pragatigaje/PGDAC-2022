@@ -1,0 +1,162 @@
+Byte Stream
+===================
+InputStream
+OutputStream
+
+
+Character Stream
+===================
+Reader
+Writer
+
+
+File class:
+This class is not used to do any read/write operation directly. It is just used to give information about files/folders.
+
+In java folder is also considered as File object.
+
+new File(filepath);
+new File(directorypath);
+
+int read() throws IOException
+
+
+FileInputStream : To read from the File
+FileOutputStream : To write to the File
+
+======================================================
+FileInputStream => FileReader
+FileOutputStream => FileWriter
+BufferedInputStream => BufferedReader
+BufferedOutputStream => BufferedWriter
+======================================================
+For char stream:
+
+int read() ;		//Reads one character at a time. Returns -1 when end of file is reached
+String readLine() ; 	//Reads a line at a time.This method is available in char stream only and not in byte 				//stream. Can be used with BufferedReader. Returns null when end of file is reached.
+String line;
+while ((line = br.readLine()) != null)
+{
+	line.split(
+}
+
+write() - can be used to write single character or a string to the destination.
+
+=========================================================================
+System.in => keyboard
+System.out => monitor/console
+System.err => monitor/console
+=========================================================================
+
+File Read/Write => FileReader/FileWriter
+Keyboard Read => InputStreamReader
+
+InputStreamReader is = new InputStreamReader(System.in);
+BufferedReader br = new BufferedReader(is);
+
+System.out.println("Enter a number: ");
+String strInput = br.readLine();
+int num = Integer.parseInt(strInput);
+=========================================================================
+
+Serialization
+--------------
+Using serialization we can store object's state in the permanent storage (hard disk) and can retrieve it any time.
+
+Serialization is possible with those class' objects only which implements Serializable interface.
+
+
+-- State of an object : At any point of time, whatever is stored in the data that reperesents the state of the object
+
+
+interface Serializable
+{
+}
+
+//To serialize
+Demo d1 = new Demo(5,"Hello",65.0);
+
+FileOutputStream fos = new FileOutputStream("myobjets.txt");
+ObjectOutputStream oos = new ObjectOutputStream(fos);
+oos.writeObject(d1);
+
+oos.flush();
+oos.close();
+                
+//To deserialize
+
+FileInputStream fis = new FileInputStream("myobjets.txt");
+ObjectInputStream ois = new ObjectInputStream(fis);
+Demo d = (Demo)ois.readObject();
+
+ois.close();
+
+=========================================================================
+
+java.nio
+---------
+
+FileChannel
+ByteBuffer
+
+while ((ch = bis.read()) != -1)
+{
+}
+
+char arr[] = new char[8];
+
+while ((ch = bis.read(arr)) != -1)
+{
+	bos.write(arr);
+}
+
+1,Rohit,75
+2,Mukesh,32
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

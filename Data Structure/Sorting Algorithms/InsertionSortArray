@@ -1,0 +1,10 @@
+class InsertionSortArray
+{
+	public static void main(String args[])
+	{
+		InsertionSo
+		int arr[]= {10, 15, 11, 9 , 47, 21};
+		
+		insertsort();
+	}
+}

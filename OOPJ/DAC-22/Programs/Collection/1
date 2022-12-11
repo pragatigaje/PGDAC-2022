@@ -1,0 +1,15 @@
+import java.util.*;
+
+class ListDemoWithoutType
+{
+	public static void main(String args[])
+	{
+		List numList1 = new ArrayList();
+		numList1.add(5);
+		numList1.add(10);
+		numList1.add(15);
+
+		int a = numlist1.get(1);
+		System.out.println(a);
+	}
+}

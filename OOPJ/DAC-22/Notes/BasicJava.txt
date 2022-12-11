@@ -1,0 +1,1704 @@
+functions -> methods -> procdures
+
+function
+data on which function operates/works
+
+program => functions + data
+
+Inheritance => Parent child relationship
+
+Father has a car
+Son will also have that car
+Son has purchased bike/smart phones
+
+
+
+Cricketer
+{
+	name
+	country
+	
+	printName();
+	printCountry();
+}
+
+Batsman
+{
+	totalRuns;
+	printTotalRuns();
+}
+
+Bowler
+{
+	totalWickets;
+	printTotalWickets();
+}
+
+
+
+Batsman and Bowler class are child class of Cricketer.
+
+
+
+Employees
+{
+	empName;
+	empId;
+	department;
+	designation;
+	joiningDate;
+	gender;
+	contactNo;
+	accountNo;
+	commonRules;
+	salary;
+	address;
+	qualification;
+	emailId;
+	
+	printSalary();
+	printPersonalDetails();
+}
+
+RegularEmployee
+{
+	retirementDate;
+	payScale; 
+	rulesForRegularEmp;
+	
+	printRetirementDate();
+	printPayScale();
+}
+
+ContractBasedEmployee
+{
+	remainingYearsOfService;
+	consolidatedSalary;
+	rulesForContractBasedEmp;
+	
+	printRemainingYearsOfService();	
+}
+
+
+
+
+Shape
+{
+	calculateArea();
+}
+
+Rectangle
+{
+	calculateArea();
+}
+
+
+Square
+{
+	calculateArea();
+}
+
+
+Circle
+{
+	calculateArea();
+}
+
+
+
+Find area of a shape.
+Rectangle
+len,br
+area
+
+Square
+side
+area
+
+Circle
+radius
+area
+
+
+calculateShapeArea =>  either rectangle,square,circle shape calculation method.
+
+
+java code  => intermediate code (byte code) => jvm (java interpreter) => machine code
+
+
+javac MyFirstProgram.java => MyFirstProgram.class
+
+
+
+
+void fun()
+{
+}
+
+main()
+{
+	-----
+	-----
+	fun();
+	----
+	----
+	fun();
+	------
+	-------
+	
+}
+
+
+---------------------------------------------
+
+
+Everything in java comes inside a class.
+Starting point of any program execution is main () function.
+
+MyFirstProgram.java
+
+-- class name will be same as java file name.
+
+/** This program will print Hello World **/
+
+class MyFirstProgram
+{
+	/**
+	*@author Shiv Nath Kumar
+	*@param name takes name as input
+	*@param age takes the age as input
+	*@return returns nothing
+	**/
+	public static void myFun(String name, int age)
+	{
+		/*
+		* Following if condition is mandatory as it checks for some special case ... more details
+		*/
+		if(age < 18)
+		{
+			//Some logic here
+		}
+	}
+	
+	public static void main(String args[])
+	{
+		System.out.println("Hello World!!");
+	}
+}
+
+
+First step : compilation
+javac MyFirstProgram.java   (It will generate MyFirstProgram.class i.e. byte code)
+
+Second step : execution
+java MyFirstProgram
+
+//single line comment
+
+/*
+* Multi line comments
+*/
+
+comments are not the part of execution.
+
+
+
+
+/**
+** For code documentation
+**/
+
+javadoc -d <destination directory path> <sourcefile name>
+
+
+int a;			
+float b;
+
+data types says two things
+1st what type of data will be stored
+2nd How much memory will be occupied 
+to store the dta
+
+if we write 
+int a;
+1st it says that a will be used to store only integer type data
+2nd it will occupy 4 bytes(32 bits) of memory.
+
+Java is strongly typed language means - each variable will must have a data type.
+
+int a = 5;
+
+OR;
+
+int a;
+a = 5;
+
+double b = 23.5;
+String s = "Hello";
+
+a = b;
+a = s;
+
+int p;
+p = a;
+
+LEFT = RIGHT
+Right is assigned to Left.
+
+char ch;		//Will be used to store a single character only.
+ch = 'y';
+ch = 'n';
+ch = 'no';		//Error
+
+String str = "no";
+
+For String use double quote " "
+For char   use single quote ' '
+
+byte b;
+
+----------------------------------------------------
+
+Scope of a variable
+
+Scope just defines the life and accessibility of a variable. Means it just says from which location a particular variable can be accessed. It just says where a variable is known and where it is not known.
+
+
+
+void fun1()
+{
+	int num1;			//scope of num1 is inside fun1
+	num1 = 10;
+	System.out.println(num1);
+}
+
+void fun2()
+{
+	System.out.println(num1);
+}
+
+
+class ScopeDemo
+{
+        public static void main(String args[])
+        {
+                int x = 5;
+                int z;
+
+                {
+                        int y = 10;
+                        x = 20;
+                }
+                
+                z = 15;
+
+                System.out.println(x);
+                //System.out.println(y);                        // will give compilation error
+                System.out.println(z);			//variable z might not have been initialized
+        }
+}
+
+
+The variables which are declared inside a method are called local variables.
+The local variables must be initialized before its use. compiler says to initialize some value for the local varaible before its use.
+
+class ScopeDemo1
+{
+        public static void main(String args[])
+        {
+                int num;
+                num++;          //compilation error variable num might not have been initialized
+        }
+}
+
+-- We can not declare two variables with the same name within the same scope.
+Example:
+
+class ScopeDemo2
+{
+        public static void main(String args[])
+        {
+                int x = 5;
+
+                {
+                        double x = 10.5; 	//Compilation error.
+                }
+
+                System.out.println(x);
+        }
+}
+
+
+-- We can store either decimal,octal or hexa value in a integer variable. But when we print that variable it will always print decimal value.
+
+int a = 47;
+
+OR;
+
+int a = 057;
+
+OR;
+
+int a = 0x2F;
+
+sop (a) ; //It will print 47;
+
+--
+
+The data type of integer literals is int.
+The data type of float literals is double.
+
+---
+
+float = double;			//Error
+long = int;			//OK
+
+long num2 = 2300000000;		//error: integer number too large: 2300000000
+
+
+class LiteralsDemo2
+{
+        public static void main(String args[])
+        {
+                System.out.println("\"Hello Friends\"");                // prints "Hello Friends"
+        }
+}
+
+
+class LiteralsDemo2
+{
+        public static void main(String args[])
+        {
+                System.out.println("\"Hello Friends\"");                // "Hello Friends"
+
+                //char ch = 65;
+                //char ch = 'A';
+                //char ch = '\101';
+                char ch = '\u0041';			//Each one will assign literal 'A' to ch.
+                System.out.println(ch);
+        }
+}
+
+
+
+------------------------------------
+
+Data Conversion
+
+int a = 10;
+int x;
+long b = 20;
+
+x = a;				// int = int : Ok
+
+a = b;				// int = long : Error (lossy conversion)
+
+b = a;				// long = int : Widening conversion, compatible, Ok (automatic conversion) 
+
+
+
+a = (int) b;			// Narrowing conversion, OK
+
+We will cast the right side according to the left side variable data type.
+
+Widening conversion => Assigning small data type into big data type => We don't need typecasting
+Narrowing conversion => Assigning big data type into small data type => We need typcasting (possible lossy conversion)
+
+
+byte x;
+int y;
+
+x = (byte)y;		//Narrowing conversion
+
+
+int a = 260;  (a = 00000000 00000000 00000001 00000100)
+byte b;
+b = (byte) a;		//Narrowing conversion (b = 00000100)
+sop(b);			//will print 4;
+
+
+
+------------------------------------------------------------
+
+double f = 35.6;
+
+
+
+int a = 10;
+long b = 50;
+
+a = (int)b;			4 bytes <= 8 bytes	//lossy conversion
+b = a;						//OK
+
+Widening conversion also known as upcasting.
+Narrowing conversion also known as downcasting.
+
+-------------------------------------------------------------------------------
+
+
+int i = 135;
+byte b;
+b = (byte) i;
+
+sop(b);		// will print
+
+Java uses 2's complement for binary representation of any negative number.
+ 
+
+
+Decmial => 89
+Binary of 89 = 1011001
+1's complement =  0100110
+2's complement =  0100111
+
+1's complement => First find out the binary, then flip each bit , means convert 0 to 1 and 1 to 0.
+2's complement => Add 1 into 1's complement. The shortcut way is to just start from the right side and keep all the bits same till we get first 1 and after that just flip each bit.
+
+For ex.
+If any decimal number has binary value = 11000100
+Then it's 1's Complement =		00111011
+2's complement		=		00111100
+
+We all know Most Significant Bit (MSB) represents the sign (positive or negative) of the value.
+0 => +ve number
+1 => -ve number
+
+byte => 11001100 (representing a -ve number, the leftmost bit is the sign bit)
+byte => 01100010 (representing a +ve number, the leftmost bit is the sign bit)
+
+
+double d = 258.53;
+int a;
+a = (int) d;
+sop(a);		//Print 258
+
+
+double d = 258.53;
+byte a;
+a = (byte) d;
+sop(a);		//Print 2
+
+
+byte b = 2;		// 00000010
+short s = b;		// 00000000 00000010
+
+byte b = -2;		// 11111110
+short s = b;		// 11111111 11111110
+sop(s);			// will print -2
+
+
+
+11001010 = -54
+
+
+-------------------------------------
+
+Type promotion
+
+1. If any arithmetic operation is taking place between two different data types then in that case the lower data type is promote to the higher data type and then the result is also stored as higher data type.
+
+int a = 5;
+int b = 10;
+double d = 6.5;
+
+a * b;			// a and b operands, * is operator
+int * int = int
+
+a * d;
+int * double;  // here a will be promoted to double at this point only. 
+double * double = double
+5 * 6.5
+5.0 * 6.5 = 32.5
+
+double res = a * d;			//Fine, Ok 
+int res = a * d;			//Error of lossy conversion
+
+int res = (int)a * d;	//a is getting typecasted to int and then multiplied by d. Still will give error.
+int res = (int)(a * d); //the result of a*d is getting typecasted to int and it is OK.
+
+sop(res);		//prints 32
+
+2. Java promotes each byte and short data to int while doing arithmetic evaluation.
+
+byte b = 25;
+short s = 30;
+
+b * s;
+byte * short => int * int
+byte * byte => int * int
+
+
+Ex.
+
+byte b = 15;
+byte c = 5;
+
+byte res1 = b * c;			//Error of lossy conversion
+
+
+b * c => byte * byte => int * int => result will be of type int.
+
+byte res1 = b * c;
+byte = int; 
+
+byte res1 = (byte)(b * c);		//OK
+
+OR;
+
+int res1 = b * c;	//OK, follow this approach maximum time, try to avoid typecasting because sometime it 					may cause data loss
+
+
+-----------------------------------------------------
+
+Identifiers
+
+- Name of the class, methods, variables
+
+- int num;
+- class Demo;	
+- void myFun();
+
+num, Demo, myFun are example of identifiers (any name we are taking in our program)
+
+int num;	//correct
+int 5num;	//wrong
+
+int _num;	//correct
+int $num;	//correct
+
+int num_of_employees;
+
+int num;
+int NUM;
+
+num & NUM are two different identifiers.
+
+
+
+UpperCamelCase => For class,interface name
+lowerCamelCase => For methods, objects name
+
+class EmployeeSalary
+{
+}
+
+class employeesalary  //will not give any error, but we should follow the standard naming convention
+{
+}
+
+class AreaOfShape
+{
+}
+
+
+void calculateArea()
+{
+}
+
+void getMarksOfTheStudent()
+{
+}
+
+EmployeeSalary empSalary;
+
+int numOfEmployees;
+int count;
+
+employeesalary
+
+
+import java.util.*;
+
+double PI = 3.14;
+int TOTAL_STUDENTS = 250;
+
+
+============================================================================
+OPERATORS
+============================================================================
+Unary operators => ++, --  => as the number of operand for these operators is one.
+
+a + b;
+
+operator => +;
+operands => a,b;
+
+
+a++;	
+
+operator => ++;
+operand  => a;
+
+increment/decrement operator
+
+int x = 5;
+
+x++;		//post-increment, x = x + 1;
+
+OR;
+
+++x;		//pre-increment, x = x + 1;
+
+sop(x);		// 6
+
+x++ and ++x both does the same work i.e. both increments the value of x by 1.
+
+int x = 5;
+
+int y = x++;		// y = 5; x = 6;
+sop(y);			// 5
+sop(x);			// 6
+
+OR;
+
+int y = ++x;		// x = 6; y = 6;
+sop(y);			// 6
+sop(x);			// 6
+
+
+int y = x++; => It says, first assign the value of x to y and then increment x.
+
+int y = ++x; => It says, first increment x and then assign the incremented value to y.
+
+
+x++ => means use value of x, before its increment
+++x => use incremented value of x
+In both the above cases value of x will be incremented, the only difference is what - which value of x we have to use, means value of x before increment or value of x after increment.
+
+
+The same rule applies with decrement "--" operator.
+
+---------------------------------------------------
+
+int x = 5;
+int y;
+y = x++ + ++x;
+
+sop(x);			// will print 7
+sop(y);			// will print 12
+
+
+int x = 5;
+int y;
+y = x-- + --x;	
+
+sop(x);			// will print 3
+sop(y);			// will print 8
+
+
+
+int x = 5;
+int y;
+y = ++x - --x + x++;
+
+sop(x);			// will print 6
+sop(y);			// will print 6
+
+-----------------------------------------------------------
+
+int x = 33 / 6;   => / is integer division
+value of x will be 5 and not 5.5
+
+int x = 33 % 6;	=> % is modulo operator
+value of x will be 3.
+
+------------------------------------------------------------
+
+var = var op exp;
+var op= exp;
+
+example:
+
+int a = 5;
+int b = 10;
+ 
+a = a + b;
+
+the above statement can be written as below also:
+
+a += b;
+
+
+a = a * b;		// equivalent to a *= b;
+
+
+=============================================================================
+Bitwise operators (~ NOT, & AND , | OR, ^ XOR)
+int a = 10;		//binary of a = 00000000 00000000 00000000 00001010
+int b = 18;		//binary of b = 00000000 00000000 00000000 00010010
+
+int res;
+res = ~a;		// ~a = 11111111 11111111 11111111 11110101	
+
+res = a & b;		// 1 & 1 = 1 , 0 & 1 = 0, 1 & 0, 0 & 0 = 0;
+
+a => 00001010
+b => 00010010
+---------------
+& => 00000010  (respective decimal value is 2) , so res will have value 2.
+
+sop (res);		// will print 2.
+				
+
+
+
+
+int x = 5;
+int y = x-- + ++x;  // x = 5, y =10
+
+---------------------------------------------
+
+Left Shift Operator ( << )
+
+
+int a = 5;
+
+int b = a << 1;
+sop (b)	 		// will print 10
+
+Binary of 5 = 00000000 00000000 00000000 00000101
+After doing left shift for 1 time
+00000000 00000000 00000000 00001010
+
+Each left shift gives multiplication by 2.
+
+
+
+int a = 6;
+int b = a >> 1;
+sop (b); 	//will print 3;
+
+Each right shift gives division by 2.
+
+---------------------------------------------------------
+
+
+int a = 10;
+int b = 8;
+
+
+a = b ;		//assigning value from b to a.
+
+a == b;		//comparing a with b.
+
+Each relational operator returns either true or false i.e. a boolean value.
+
+Relational operators => ==,  !=, > , < , >= , <=
+
+int a = 10;
+int b = 8;
+
+boolean res = (a == b);
+sop (res) ;		//prints false
+
+boolean res = a != b;
+sop (res) ;		//prints true
+
+boolean res = a > b;
+sop (res) ;		//prints true
+
+boolean res = a < b;
+sop (res) ;		//prints false
+
+boolean res = a >= b;
+sop (res) ;		//prints true
+
+boolean res = a <= b;
+sop (res) ;		//prints false
+
+
+if(a > b) 
+{
+	sop ("TRUE");		//it will be printed
+}
+
+if(true)			//OK
+{
+	sop ("TRUE");		//This will be printed
+}
+
+
+----------------------------------------------------------
+
+Boolean Logical Operators
+
+~ (not), & (and), | (or), ^ (xor) 
+
+The above operators are used for bitwise operation for the binary numbers and are also used for boolean operations.
+
+
+boolean b1 = true;
+boolean b2 = false;
+
+boolean res = ~b1;	//res will contain here false
+boolean res = ~b2;	//res will contain here true
+
+boolean res = b1 & b2;	// true & false, res will contain here false
+
+boolean res = b1 ^ b2;	// true & false, res will contain here true
+
+For operations with boolean values
+~ just gives the opposite value i.e. for true it will give false and for false it will give true.
+& says if anyone of the two operands is false then it will return false.
+| says if anyone of the two operands is true then it will return true.
+^ says if both the operands are same then it will return false otherwise true.
+
+
+For operations with integers (binary values)
+~ just gives the opposite value i.e. for 1 it will give 0 and for 0 it will give 1.
+& says if anyone of the two operands is 0 then it will return 0.
+| says if anyone of the two operands is 1 then it will return 1.
+^ says if both the operands are same then it will return 0 otherwise 1.
+
+--------------------------------------------------------------
+
+&& (Short circuit logical AND operator) and & (Boolean logical AND operator) => both can be applied with boolean values
+
+& says if anyone of the two operands is false then it will return false.
+&& says if anyone of the two operands is false then it will return false.
+
+boolean b1 = true;
+boolean b2 = false;
+
+boolean res = b1 & b2;		//res will contain false
+boolean res = b1 && b2;		//res will contain false
+
+Both the statement above will return the same result.
+
+(exp1) & (exp2) ; // In this case both the expressions will be evaluated.
+(exp1) && (exp2) ; // In this case it is not mandatory that both the expression will be evaluated. If the exp1 				is false, exp2 will not be evaluated. If the exp1 is true, in that case exp2 will 			also be evaluated.
+
+
+
+class AndOperatorDemo
+{
+        public static void main(String args[])
+        {
+                int x = 5;
+                int y = 10;
+
+                if(x > y & y++ < 15)
+                {
+                        System.out.println("Hi");
+                }
+                else
+                {
+                        System.out.println("Bye");
+                }
+
+                System.out.println(x);
+                System.out.println(y);
+        }
+}
+
+OUTPUT:
+Bye
+5
+11
+
+-- Just a small change, && inplace of &. Observe the output.
+
+class AndOperatorDemo
+{
+        public static void main(String args[])
+        {
+                int x = 5;
+                int y = 10;
+
+                if(x > y && y++ < 15)
+                {
+                        System.out.println("Hi");
+                }
+                else
+                {
+                        System.out.println("Bye");
+                }
+
+                System.out.println(x);
+                System.out.println(y);
+        }
+}
+
+OUTPUT:
+Bye
+5
+10
+
+
+------------------------------------------
+
+Difference between || (Short circuit Logical OR) and | (Boolean Logical OR operator)
+
+It is similar to && and & difference.
+when we use ||  => If from the first experession itself, the output of the entire statement can be determined then the second expression is not evaluated.
+
+When we use | => It will always evaluate both the expressions/operands.
+
+
+class AndOperatorDemo
+{
+        public static void main(String args[])
+        {
+                int x = 5;
+                int y = 10;
+
+                if(x < y | y++ > 15)
+                {
+                        System.out.println("Hi");
+                }
+                else
+                {
+                        System.out.println("Bye");
+                }
+
+                System.out.println(x);
+                System.out.println(y);
+        }
+}
+
+OUTPUT:
+Hi
+5
+11
+
+-- Just do a small change, || in place of |. Just observe the output.
+class AndOperatorDemo
+{
+        public static void main(String args[])
+        {
+                int x = 5;
+                int y = 10;
+
+                if(x < y || y++ > 15)
+                {
+                        System.out.println("Hi");
+                }
+                else
+                {
+                        System.out.println("Bye");
+                }
+
+                System.out.println(x);
+                System.out.println(y);
+        }
+}
+
+OUTPUT:
+Hi
+5
+10
+
+-------------------------------------
+
+int x, y, z;
+x = y = z = 100;
+
+---------------------------------------
+
+Ternary Operator
+
+int x = 5;
+int y = 10;
+int bigger;
+
+if(x > y)
+{
+	bigger = x;
+}
+else
+{
+	bigger = y;
+}
+
+OR;
+
+bigger = x > y ? x : y;	//It will return y and the value of y will be stored in bigger.
+sop(bigger);		//will print 10.
+
+<conditional statement> ? <if true then return this first part> : <otherwise return this second part>
+
+
+==============================================================
+
+Control statements
+
+----- if-else --------
+
+class IfElseDemo
+{
+        public static void main(String args[])
+        {
+                int x = 5;
+                int y = 10;
+                int z = 15;
+
+                if(x > y && x > z)
+                {
+                        System.out.println ("x is greater");
+                }
+                else
+                {
+                        if(y > z)
+                        {
+                                System.out.println("y is greater");
+                        }
+                        else
+                        {
+                                System.out.println("z is greater");
+                        }
+                }
+        }
+}
+
+
+---------------
+
+class IfElseDemo
+{
+        public static void main(String args[])
+        {
+                int x = 5;
+                int y = 10;
+                int z = 15;
+
+                if(x > y && x > z)
+                {
+                        System.out.println ("x is greater");
+                }
+                else if(y > z)
+                {
+                        System.out.println("y is greater");
+                }
+                else
+                {
+                        System.out.println("z is greater");
+                }
+        }
+}
+
+
+--------------
+
+if(condition true)
+{
+	then control will come inside if block
+}
+else
+{
+	then control will come inside else block
+}
+
+-------------
+
+
+if (condition true)
+{
+	then control will come to this if block
+}
+else if (condition true)
+{
+	then control will come to this else if block
+}
+else if (condition true)
+{
+	then control will come to this else if block
+}
+else if (condition true)
+{
+	then control will come to this else if block
+}
+else
+{
+	if all the above if and else-if evaluates to false , then control will come to this else block.
+}
+
+control out of if else chain.
+any one of the if/else condition will be executed and control will come out of the if-else chain
+
+
+-----------------------
+
+if can exist without else, means else block is not mandatory.
+Ex: following is correct
+if(x > y)
+{
+}
+
+But else can not exist without if.
+
+ex: following is wrong.
+
+else
+{
+	//some code
+}
+
+-----------------------------------------------
+
+switch statement (switch-case-break)
+---------------------------------------
+
+switch (choice)
+{
+	case 1:
+		//some code
+		break;
+	
+	case 2:
+		//some code
+		break;
+	
+	case 3:
+		//some code
+		break;
+	
+	default:
+		//some code
+}
+
+When no case matches the input choice then default will be executed.
+
+Ex.
+
+class SwitchCaseDemo
+{
+        public static void main(String args[])
+        {
+                int choice = 2;
+
+                switch (choice)
+                {
+                        case 1:
+                                System.out.println("Choice 1 selected");
+                                break;
+                        case 2:
+                                System.out.println("Choice 2 selected");
+
+                        case 3:
+                                System.out.println("Choice 3 selected");
+                                break;
+                        default:
+                                System.out.println("default choice");
+                }
+
+                System.out.println("Out of switch-case");
+        }
+}
+
+
+Output:
+Choice 2 selected
+Choice 3 selected
+Out of switch-case
+
+as we did not use break statement inside case 2, that is why case 3 also executed after execution of case 2 as it is obvious with the above output.
+
+break takes the control out of the entire switch-case.
+
+
+class SwitchCaseDemo
+{
+        public static void main(String args[])
+        {
+                int choice = 2;
+
+                switch (choice)
+                {
+                        case 1:
+                                System.out.println("Choice 1 selected");
+                               
+                        case 2:
+                                System.out.println("Choice 2 selected");
+
+                        case 3:
+                                System.out.println("Choice 3 selected");
+                                break;
+                        default:
+                                System.out.println("default choice");
+                                break;
+                }
+
+                System.out.println("Out of switch-case");
+        }
+}
+
+
+Output:
+Choice 2 selected
+Choice 3 selected
+Out of switch-case
+
+-- Ex. switch-case without default.
+
+class SwitchCaseDemo
+{
+        public static void main(String args[])
+        {
+                int choice = 5;
+
+                switch (choice)
+                {
+                        case 1:
+                        	int x;
+       				x = 0;
+                                System.out.println("Choice 1 selected");
+                                break;
+                        case 2:
+                        	x = 1;
+                        	System.out.println(x);
+                                System.out.println("Choice 2 selected");
+                                break;
+
+                        case 3:
+                        	x = 0;
+                                System.out.println("Choice 3 selected");
+                                break;
+                }
+
+                System.out.println("Out of switch-case");
+        }
+}
+
+Output:
+Out of switch-case
+
+-------------
+Ex. When we write default first.
+
+class SwitchCaseDemo
+{
+        public static void main(String args[])
+        {
+                int choice = 5;
+
+                switch (choice)
+                {
+                        default:
+                                System.out.println("default choice");
+                        case 1:
+                                System.out.println("Choice 1 selected");
+                                break;
+                        case 2:
+                                System.out.println("Choice 2 selected");
+
+                        case 3:
+                                System.out.println("Choice 3 selected");
+                                break;
+                }
+
+                System.out.println("Out of switch-case");
+        }
+}
+
+
+OUTPUT:
+default choice
+Choice 1 selected
+Out of switch-case
+
+
+--- 
+As we have to execute only default case and not case 1, then we must use break inside default .
+
+class SwitchCaseDemo
+{
+        public static void main(String args[])
+        {
+                int choice = 5;
+
+                switch (choice)
+                {
+                        default:
+                                System.out.println("default choice");
+                                break;
+                        case 1:
+                                System.out.println("Choice 1 selected");
+                                break;
+                        case 2:
+                                System.out.println("Choice 2 selected");
+
+                        case 3:
+                                System.out.println("Choice 3 selected");
+                                break;
+                }
+
+                System.out.println("Out of switch-case");
+        }
+}
+
+
+OUTPUT:
+default choice
+Out of switch-case
+
+
+
+
+
+int a = 326;			// 0000000 00000000 00000001 01000110
+byte b = (byte) a;
+
+int a = -326;			// 11111111 11111111 11111110 10111010
+byte b = (byte) a;		// b => 10111010 (-70) => 2's comp => 01000110
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

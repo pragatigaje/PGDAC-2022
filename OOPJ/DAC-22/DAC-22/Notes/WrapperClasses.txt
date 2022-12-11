@@ -1,0 +1,185 @@
+Eight primitive types:
+byte
+short
+int
+long
+float
+double
+char
+boolean
+
+Some classes in java works only with Object or we can say at some places we must have objects to do the operations. In such scenario, wrapper class plays a major role. In the collection framework and in generics, only object is required there to do any operation. These can not work with primitive type.
+
+
+Wrapper classes are basically used to wrap the primitive type into objects. Following are the wrapper classes:
+
+Byte
+Short
+Integer
+Long
+Float
+Double
+Character
+Boolean
+
+
+Number is the superclass of all the wrapper classes and it is an abstract class. So, we can not create object of class Number.
+
+//Creating object of Double
+Double dobj = new Double(53.5);			//Primitive to Double Wrapper
+
+Double dobj = new Double("53.5");		//String to Double Wrapper
+
+Double dobj = Double.valueOf("53.5");		//String to Double Wrapper
+
+double dp = Double.parseDouble("53.5");		//String to primitive double
+
+double dp = dobj.doubleValue();			//Double object to primitive double
+
+Double dobj1 = new Double("53.5");
+
+dobj.compareTo(dobj1);
+	-- will return 0 if dobj == dobj1
+	-- will return 1 if dobj > dobj1
+	-- will return -1 if dobj < dobj1
+
+-- Each wrapper class has overridden the toString() method of the Object class.
+
+//Creating object of Integer
+Integer iobj = new Integer(56);
+Integer iobj = new Integer("56");
+
+int ip = Integer.parseInt("537");		//String to primitive int
+
+======================================================================
+-- wrapper classes override toString() and equals() method. Here equals() method compares the content and not the references.
+
+
+class WrapperDemo
+{
+        public static void main(String args[])
+        {
+                //Double dobj = new Double(53.5);
+                //Double dobj = new Double("53.5");
+                Double dobj = Double.valueOf("53.5");
+                double dp = Double.parseDouble("53.5");
+                
+                Double dobj1 = new Double("53.5");
+                
+                int ip = Integer.parseInt("537");
+                
+                String s = dobj.toString();		//Returns String representation of the double value
+                //System.out.println(d);		//System.out.println(d.toString());
+                int res = dobj.compareTo(dobj1);
+                System.out.println("dobj.compareTo(dobj1) : "+res);
+                
+                double dp1 = dobj1.doubleValue();
+                byte bp = dobj1.byteValue();	//bp will have value 2
+                int ip1 = dobj1.intValue();	//ip1 will have value 258
+                
+                System.out.println(dobj.equals(dobj1));
+                
+                Integer iobj = new Integer("567");
+                Integer iobj1 = new Integer("566");
+                System.out.println(iobj.equals(iobj1));
+                      
+        }
+}   
+
+===============================================================================
+
+Integer
+----------
+new Integer(5);		//Returns Integer object
+Integer.valueOf("5");	//Returns Integer object
+Integer.parseInt("5");	//Converts string numeric to int primitive ****
+toString();		//Returns string represention of the number
+intValue();		//Returns int primitive from Integer object
+
+Byte,Short,Long,Float,Double : Same methods
+
+
+================================================================================
+
+Integer and Long class have following static methods.
+
+- toBinaryString();
+- toHexString();
+- toOctalString();
+
+
+Integer.toBinaryString(5);	//will give 101
+Integer.toHexString(31);	//will give 1f
+
+================================================================================
+
+Storing primitive data into the Wrapper object is Boxing
+Getting primitive data from the Wrapper object is Unboxing
+
+Integer iobj = new Integer(10);		//Boxing
+
+int val = iobj.intValue();		//Unboxing
+
+Autoboxing and Auto-unboxing
+-------------------------------
+
+Integer iobj = 10;		//Autoboxing; Internally constant pool is used here.
+
+int val = iobj;			//Auto-unboxing; Internally int val = iobj.intValue();
+
+
+Integer = int;
+int = Integer;
+
+Both types are compatible with each other due to auto-boxing and auto-unboxing.
+
+Example:
+class BoxingDemo {
+
+	int fun(Integer v) 
+	{
+		return v;
+	}
+	
+	public static void main(String args[ ]) 
+	{
+		Integer iob = fun(100);
+		System.out.println(iob);
+	} 
+}
+
+=================================================================================
+Whatever artihmetic operations we can perform with primitive data, samething can also be performed with the wrapper class objects.
+
+Integer iobj = 10;
+iobj++;
+
+int i = 0;
+i++;
+
+int x = 5;
+int y = 10
+int z = x + y;
+
+Integer iobj1 = 5;
+int a = 10
+
+int res = iobj1 + a;		//OK, res will have value 15.
+
+====================================================================================
+Each object has a header which contains information for housekeeping work.
+in 32 bit jvm - Header occupies 8 byte. (padded with multiple of 4)
+in 64 bit jvm - Header occupies 12 byte. (padded with multiple of 8)
+
+int takes 4 byte.
+Integer takes 16 byte. (for 64 bit jvm) 
+
+======================================================================================
+
+
+
+
+
+
+
+

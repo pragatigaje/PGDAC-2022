@@ -1,0 +1,27 @@
+1) What do you mean by Data Structures?
+2) Define The Goals Of Data Structure?
+3) What is the Need of DS
+4) List out the areas in which data structures are applied extensively(real time examples)?
+5) List different types of data structures.
+6) What Does Abstract Data Type Mean?
+7)Difference between Primitive and Non Primitive DS
+8)Difference between Linear and Non Linear DS
+
+****************************************************************
+
+1) What is Recursion? 
+2) List and Explain types of Recursion 
+3) Explain the data structures used to perform recursion? 
+4)List the examples where recursion is used 
+5)Explain the difference between Recursion and Iteration, justify which to use when,Tail recursion?
+
+
+ Lab Questions : 
+1. Write a program to print a series of numbers with recursive Java methods 
+2. Write a program to sum a series of numbers with Java recursion 
+3. Write a program to calculate a factorial in Java with recursion 
+4. Write a program to print the Fibonacci series with Java and recursion 
+5.Write a program to implement a recursive Java palindrome checker
+
+
+*******************************************************************

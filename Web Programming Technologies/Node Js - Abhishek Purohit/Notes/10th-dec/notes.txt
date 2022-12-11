@@ -1,0 +1,103 @@
+DOM: Document Object Model 
+
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<h1>My Heading</h1>
+		<form>
+			<input>
+			<select> <option>Mumbai</option> </select>
+		</form>
+	</body>
+</html>
+
+whenever a web page/.html file is loaded into the browser
+at the same time browser will create a tree structure of the tags
+ 
+                    html
+
+		head                     body
+  
+        title                h1        form
+                                       
+                                      input select
+
+
+
+
+      document is an object of the DOM
+      DOM manipulation: making changes in the DOM
+      
+1. we can add new elements in DOM
+2. we can remove elements from the DOM
+3. we can get the content written inside an element
+4. we can change the content written inside an element
+5. we can change the style also 
+6. we can get value of attributes
+7. we can change the value of attributes
+
+
+
+
+
+
+change and get the content of element:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">Hello World</h1>
+    <input type="button" value="get data" onclick="getData()">
+    <script>
+        function getData(){
+           var heading= document.getElementById('heading')
+           console.log(heading.innerHTML);
+           heading.innerHTML="Bye....";
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+change and get the attributes:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="password" placeholder="Enter Password"  id="passwordField">
+    <input type="button" value="show" onclick="showPassword()" id="btn">
+    <script>
+        function showPassword() {
+            var field=document.getElementById("passwordField");
+            var btn=document.getElementById('btn')
+            if(btn.getAttribute('value')=="show"){
+                field.setAttribute('type','text');
+                btn.setAttribute('value','hide');
+            }
+            else{
+                field.setAttribute('type','password');
+                btn.setAttribute('value','show');
+            }
+            
+        }
+    </script>
+</body>
+</html>
+
+

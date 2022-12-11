@@ -1,0 +1,796 @@
+Collection framework is used to work with group of similar type of objects i.e. objects belonging to the same class.
+
+-- A Java collection framework provides a number of classes and interfaces to store and manipulate a group of objects
+-- Collection is an object which contains the reference of other objects.
+-- The Java collections framework implement commonly reusable collection data structures
+-- Collection class is also known as container class and collection object is also known as container object.
+-- Collection framework classes works with class types (objects) only and not with the primitive data.
+
+-- Collection is an interface, whereas Collections is a utility class.
+
+
+Container class examples:
+ArrayList
+LinkedList
+HashSet
+etc..
+
+
+-- Storing and accessing mechanism is different for different container classes which might increase or decrease the time complexity of our program.
+
+
+Container class object creation
+Then adding objects (similar type) to that container
+Then accessing and using those objects stored in the container.
+
+contains();
+
+interface Iterable
+{
+}
+
+interface Collection extends Iterable
+{
+}
+
+
+
+interface List extends Collection
+{
+class ArrayList implements List
+{
+	//It has implemented all the methods of Iterable,Collection and List interface.
+}
+========================================================================================
+
+interface List extends Collection
+{
+}
+
+class ArrayList implements List
+{
+	//List + Collection methods
+}
+
+========================================================================================
+
+Collection interface methods
+-------------------------------------
+
+add(elem) - Method to add one element at a time.
+addAll(list) - Method to add more than one element at a time.
+clear() - clears the container
+contains(obj) - returns true if the object is there in the container.
+containsAll(list) - returns true if all the objects from the collection(list,set) is in the container
+isEmpty() - returns true if container contains no object i.e. it is empty.
+remove() - removes a element from the container
+removeAll() -	removes more than one element from the container.
+
+============================================================================================
+
+list1.removeAll(list2); ==> Only those elements from list1 will be removed which are common between list1 and list2. 
+
+
+List1:
+
+Rohit
+Radha
+Geeta
+Rohit
+Shyam
+Madhur
+Amisha
+
+
+List3:
+
+Shyam
+Geeta
+Meeta
+
+
+list1.retainAll(list3) ==> Inside list1, retains only the common elements between list1 and list3. Other elements will be removed from the list1.
+
+Now List1:
+
+Geeta
+Shyam
+
+============================================================================================
+import java.util.*;
+
+class ArrayListDemo
+{
+	static void display(List<String> list)
+	{
+		for(String s : list)
+		{
+			System.out.println(s);
+		}
+	}
+
+	public static void main(String args[])
+	{
+		List <String> list1 = new ArrayList<String>();
+
+		list1.add("Rohit");
+		list1.add("Mukesh");
+		list1.add("Radha");
+		list1.add("Geeta");
+
+
+		//Using for-each loop
+		System.out.println("List1 elements: ");
+		display(list1);
+		
+		
+		ArrayList<String> list2 = new ArrayList<String>();
+		list2.add("Rohit");
+		list2.add("Shyam");
+		list2.add("Madhur");
+		list2.add("Amisha");
+		
+		System.out.println("List2 elements: ");
+		display(list2);
+
+		ArrayList<String> list3 = new ArrayList<String>();
+		list3.add("Shyam");
+		list3.add("Geeta");
+		list3.add("Meeta");
+		
+		//addAll() method
+		list1.addAll(list2);
+
+		System.out.println("List1 elements after adding List2 elements:");
+		display(list1);
+
+
+		//clear() method
+
+		//list1.clear();
+	 	System.out.println("List1 elements after list1.clear():");
+		display(list1);
+
+		//contains() method
+
+		boolean b;
+
+		b = list1.contains("Shyam");
+		System.out.println("list1.contains(\"Shyam\") : " + b);
+
+		b = list1.contains("Rajan");
+		System.out.println("list1.contains(\"Rajan\") : " + b);
+
+
+		//containsAll() method
+		b = list1.containsAll(list2);		//true
+		System.out.println("list1.containsAll(list2) : " + b);
+
+		b = list1.containsAll(list3);		//false
+		System.out.println("list1.containsAll(list3) : " + b);
+
+		//isEmpty() method
+		b = list1.isEmpty();		//false
+		System.out.println("list1.isEmpty() : " + b);
+
+		//remove() method
+		list1.remove("Mukesh");		//false
+		System.out.println("List1 elements after removing Mukesh : ");
+		display(list1);
+
+		//removeAll() method
+		//list1.removeAll(list2);
+		System.out.println("List1 elements after removing all list2 : ");
+		display(list1);
+
+		System.out.println("List2 elements : ");
+		display(list2);
+
+		//retainAll() method
+		list1.retainAll(list3);
+		System.out.println("List1 elements after retaining all list3 : ");
+		display(list1);
+
+		System.out.println("List3 elements: ");
+		display(list3);
+
+		//size() method
+		int r = list1.size();
+		System.out.println("list1.size() : " + r);
+
+		//toArray() method
+		Object [] arr =  list1.toArray();
+		System.out.println("Iterating arr after list1.toArray() : ");
+		for(Object ob : arr)
+		{
+			System.out.println(ob);
+		}
+
+
+	}
+}
+============================================================================================
+
+List
+Set
+Map
+
+
+In list, elements are added/accessed in their insertion order. It means elements can be retrieved in the same order in which they have been added to the container.
+
+In set (except LinkedHashSet) and map, insertion order is not maintained.
+
+
+list1.add("Rohit");
+list1.add("Mohit");
+list1.add("Sita");
+
+=====================================================
+
+interface MyInterface
+{
+}
+
+class Demo implements MyInterface
+{
+}
+
+
+class XYZ implements Iterator
+{
+}
+
+Iterator iterator(){
+	return new XYZ();
+}
+
+
+
+Demo d = new Demo();
+
+=====================================================
+
+Iterator can be used to iterate List, Queue, Set
+ListIterator can be used to iterate List
+
+Iterator can not be used to iterate Map.
+
+Iterator can be used with the classes which implement Iterable interface.
+
+==========================================================================================
+import java.util.*;
+
+class IterationDemo
+{
+
+	public static void main(String args[])
+	{
+		List <String> list1 = new ArrayList<String>();
+
+		list1.add("Rohit");
+		list1.add("Mukesh");
+		list1.add("Radha");
+		list1.add("Geeta");
+
+
+		//Using for-each loop
+		System.out.println("Using for-each iterating List1 elements: ");
+
+		for(String s : list1)
+		{
+			System.out.println(s);
+		}
+
+		//Using Iterator
+		System.out.println("Using Iterator iterating List1 elements: ");
+		Iterator<String> it = list1.iterator();
+		while(it.hasNext())
+		{
+			String s = it.next();
+			System.out.println(s);
+		}	
+
+		//Using ListIterator
+		System.out.println("Using ListIterator iterating List1 elements: ");
+		ListIterator<String> lit = list1.listIterator();
+		while(lit.hasNext())
+		{
+			String s = lit.next();
+			System.out.println(s);
+		}	
+
+		System.out.println("Using ListIterator iterating List1 elements in reverse order: ");
+		while(lit.hasPrevious())
+		{
+			String s = lit.previous();
+			System.out.println(s);
+		}
+
+		//Using Enumeration 
+		System.out.println("Using Enumeration iterating List1 elements: ");
+		Enumeration<String> em = Collections.enumeration(list1);
+		while(em.hasMoreElements())
+		{
+			String s = em.nextElement();
+			System.out.println(s);
+		}	
+		
+
+
+	}
+}
+
+==========================================================================================
+
+String s1 = "welcome";
+String s2 = "welcome";
+String s3 = new String("welcome");
+
+
+s1 == s3 ;	//false
+s1 == s2 ; 	//true
+
+== compares the references only.
+
+s1.equals(s3);		//true
+s1.equals(s2);		//true
+
+==========================================================================================
+
+contains(), containsAll(), remove(), removeAll() - Uses equals method internally to find the objects.
+
+==========================================================================================
+
+import java.util.*;
+
+class Student
+{
+	int roll;
+	String name;
+	double marks;
+
+	Student()
+	{
+	}
+
+	Student(int roll, String name, double marks)
+	{
+		this.roll = roll;
+		this.name = name;
+		this. marks = marks;
+	}
+
+	public String toString()
+	{
+		return "Student[roll = " + roll + ", name = "+name + ", marks = " + marks + "]";
+	}
+
+	public int hashCode()
+	{
+
+		return (int) (roll+marks);
+	}
+
+	public boolean equals(Object ob)
+	{
+		Student s = (Student) ob;
+		if(s == null)
+			return false;
+
+		if(this.roll == s.roll && this.name.equals(s.name) && this.marks == s.marks)
+			return true;
+		else
+			return false;
+
+	}
+}
+
+class ArrayListForUserDefinedObjects
+{
+	public static void display(List<Student> mylist)
+	{
+		Iterator<Student> it = mylist.iterator();
+		while(it.hasNext())
+		{
+			Student s = it.next();
+			System.out.println(s);
+		}
+	}
+
+	public static void main(String args[])
+	{
+		List<Student> list1 = new ArrayList<Student>();
+
+		Student s1 = new Student(1,"Rohit",75.0);
+		list1.add(s1);
+
+		list1.add(new Student(2,"Manish",65.0));
+		list1.add(new Student(3,"Geeta",72.0));
+
+		list1.add(new Student(4,"Mohit",69.0));
+
+		//Iterating using Iterator
+		System.out.println("List1 elements: ");
+		display(list1);
+
+		List<Student> list2 = new ArrayList<Student>();
+		list2.add(new Student(5,"Mahesh",56.0));
+		list2.add(new Student(6,"Amisha",67.0));
+
+		System.out.println("List2 elements: ");
+		display(list2);
+
+		//addAll() method.
+		list1.addAll(list2);
+		System.out.println("List1 elements after addAll list2 : ");
+		display(list1);
+
+		//contains() method
+		boolean b = list1.contains(s1);
+		System.out.println("list1.contains(s1) : " + b);
+
+		
+		Student s2 = new Student(1,"Rohit",75.0);
+
+		b = list1.contains(s2);
+		System.out.println("list1.contains(s2) : " + b);
+
+
+		//remove() method
+		list1.remove(s2);
+		System.out.println("list1.remove(s2) : ");
+		display(list1);
+
+		b = list1.containsAll(list2);		//true;
+		System.out.println("list1.containsAll(list2): " + b);
+
+	}
+}
+
+
+==================================================================================
+
+ExceptionHandling:
+
+Make your own exception class for the following:
+
+Enter your age : 21
+You are eligible for voting.
+
+Enter your age : 16
+You are not eligible for voting.
+
+if(age > 21)
+	System.out.println("You are eligible for voting");
+if(age < 18)	
+	throw your exception object
+	
+====================================================================================
+
+Generics
+---------
+class Student
+{
+	int roll;
+	double marks;
+}
+
+class MyGen<T1,T2>
+{
+	T1 ob1;
+	T2 ob2;
+	
+	void setOb1()
+	{
+	}
+	
+	T1 getOb1()
+	{
+	}
+	
+	void setOb2()
+	{
+	}
+	
+	T2 getOb2()
+	{
+	}
+}
+
+MyGen<Integer,Double> mg1 = new MyGen<Integer,Double>();
+mg1.setOb1(10);
+mg1.setOb2(65.0);
+
+int i = mg1.getOb1();
+double d = mg1.getOb2();
+
+sop(i);
+sop(d);
+
+MyGen<Integer,Student> mg2 = new MyGen<Integer,Student>();
+mg2.setOb1(1);
+mg2.setOb2(new Student(2,87.5));
+
+sop(mg2.getOb1());
+sop(mg2.getOb2());
+==========================================================================
+Sorting List Elements (Not for Set or Map)
+
+Collections is an utility class which contains a static method sort(), which can be used to sort the array list elements.
+
+
+List<Student> list1 = new ArrayList<Student>();
+//Add some Student objects in the list1.
+
+Collections.sort(list1);
+
+List<Student> list1 = new ArrayList<Student>();
+
+Step 1: class Student implements Comparable<Student> { }
+
+Step 2: override compareTo() method of Comparable interface
+	public int compareTo(Student s)
+	{
+		if(this.marks > s.marks)
+			return 1;
+		if(this.marks < s.marks)
+			return -1;
+		
+		return 0;
+	}
+Step 3: sort using - Collections.sort(list1);
+
+==========================================================================
+Comparable and Comparator are used to comparet two objects based on some fields.
+When we use comparable, we can compare objects based on one field.
+If we need to do comparison based on more than one fields, Comparator can be used there.
+Comparable has method compareTo()
+Comparator has method comapre()
+==========================================================================
+
+-- HashSet internally uses HashMap
+-- Insertion order is not maintained in HashSet and HashMap so index based accessing is not possible.
+-- HashSet does not allow duplicate elements/values
+-- HashSet can have maximum one null value.
+-- ArrayList allows duplicate elements.
+
+==========================================================================
+
+== always does shallow comparison , means compares references in case of objects.
+
+equals() - Object class equals() does shallow comparison and if we want to do deep comparison we will have to override this method equals() and hashCode() inside our class.
+
+String and Wrapper classes has already overridden the equals() and hashCode() method and always does the deep comparison using equals().
+
+==========================================================================
+
+HashMap
+--------
+
+- It stores the object/data in the key-value form.
+- key should be some unique value.
+- Map does not allow duplicate keys.
+
+Map<KeyType,ValueType>
+
+Map<Integer,Student> map1 = new HashMap<Integer,Student>();
+
+OR;
+
+Map<Integer,Student> map1 = new HashMap<>();
+
+===> Adding objects/elements to map
+
+Student s1 = new Student(10,"Rohit",65.0,21);
+Student s2 = new Student(20,"Mohit",75.0,22);
+
+//Storing/adding object to map ==> put(key,value)
+map1.put(1,s1);
+map1.put(2,s2);
+map1.put(3,new Student(30,"Geeta",62.0));
+
+
+//Retrieve object using key ==> get(key)
+Student s = map1.get(2);
+System.out.println(s);		//20,Mohit,75.0,22
+
+
+-- Iterator and for-each can not be used with map to iterate it.
+-- Each map object has a method entrySet() method which gives set of  Map.Entry objects for the respective map.
+-- Map.Entry is an interface
+
+Set<Map.Entry<Integer,Student>> set1 = map1.entrySet();
+
+//Iterate map1
+
+for(Map.Entry<Integer,Student> entry : set1)
+{
+	//entry.getKey();		-- returns key
+	//entry.getValue();		-- returns value
+}
+
+
+
+Map<Integer,String> map2 = new HashMap<Integer,String>();
+
+Set<Map.Entry<Integer,String>> set2 = map2.entrySet();
+
+
+-- entrySet()	//It gives set of Map.Entry objects for the respective map
+-- keySet()  	//It gives set of keys of the respective map
+-- values()	//It gives collection of values/objects of the respective map
+
+Set<Integer> kset1 = map1.keySet();
+Collection<Student> elements = map1.values();
+
+for(Student  s : elements)
+{
+	System.out.println(s);
+}
+
+=========================================================
+
+-- TreeMap stores the object in the sorted order of their keys.
+
+-- Tree[Set/Map] => Stores data in sorted order. In tree map on the basis of keys.
+===========================================================
+
+Arrays is an utility class just like Collections
+fill()
+sort()
+toString()
+
+Collections
+sort()
+shuffle()
+===========================================================
+Collection Interface Methods
+List Interface Methods
+Map Interface Methods
+
+===========================================================
+Difference between set & list
+If key based sorting is required which map will be used. (TreeMap)
+HashTable & HashMap difference
+===========================================================
+
+Set <String> hs1 = new HashSet<String>();  //Not synchronized means multiple threads can access it 						//simultaneously.
+
+Set<String> synchSet = Collections.synchronizedSet(hs1);		//Now synchSet is the synchronizedSet
+
+List<String> synchList = Collections.synchronizedList(list1);	//Now synchronized
+
+Map<String,Student> synchMap = Collections.synchronizedMap(map1);	//Now synchronized
+
+
+=============================================================
+ArrayList is not synchronized. Faster than Vector.
+Vector is synchronized.
+
+Non-synchronized will always be faster than synchronized as there is no extra overhead of achieving synchronization.
+
+HashMap is not synchronized whereas HashTable is synchronized.
+=============================================================
+
+Backward Compatibility.
+
+List<Integer> myList = new ArrayList<Integer>();
+
+List myList = new ArrayList();			//Old style, now not recommendeded as we can add any object to 							//this
+
+=======================================================================================
+
+List<Shape> myList = new ArrayList<Shape>();	
+
+The above myList can be used to store either Shape class or Shape class' child object.
+
+========================================================================================
+
+class First
+{
+}
+
+class Shape
+{
+	void calArea()
+	{
+		System.out.println("calArea of Shape");
+	}
+}
+
+class Rectangle extends Shape
+{
+	void calArea()
+	{
+		System.out.println("calArea of Rectangle");
+	}
+}
+
+class Square extends Shape
+{
+	void calArea()
+	{
+		System.out.println("calArea of Square");
+	}
+}
+
+class Circle extends Shape
+{
+	void calArea()
+	{
+		System.out.println("calArea of Circle");
+	}
+}
+
+
+class ListDemoWithoutType
+{
+	public static void main(String args[])
+	{
+		List numList1 = new ArrayList();	//Old version and not recommended
+		numList1.add(5);
+		numList1.add(10);
+		numList1.add(15);
+		numList1.add("hello");
+		numList1.add(new First());
+
+		//int a = (Integer)(numList1.get(3));	//Runtime error
+		//System.out.println(a);
+		
+		List<Shape> myList = new ArrayList<>();
+
+		myList.add(new Shape());
+		myList.add(new Rectangle());
+		myList.add(new Square());
+		myList.add(new Circle());
+		//myList.add(new First());		//compile time error
+
+		Shape s = myList.get(2);
+		s.calArea();
+
+		s = myList.get(3);
+		s.calArea();
+
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

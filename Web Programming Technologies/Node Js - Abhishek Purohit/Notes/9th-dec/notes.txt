@@ -1,0 +1,194 @@
+async-> writeFile(), readFile()
+sync-> writeFileSync(), readFileSync()
+
+const fs=require('fs');
+
+fs.writeFile("demo.txt","this is node js fs module",()=>{
+    console.log("write operation completed !");
+});
+
+console.log("after write operation completed");
+
+
+const fs=require('fs');
+
+fs.readFile("demo.txt",(error,data)=>{
+    if (error) {
+        console.log(error);
+    } else {
+        console.log(data.toString());
+    }
+});
+
+console.log("after reading file");
+
+
+
+
+const fs=require('fs');
+
+fs.writeFileSync("newfile.txt","this is sync write operation");
+console.log("write operation completed");
+console.log("after reading file");
+
+
+
+const fs=require('fs');
+
+const data=fs.readFileSync('newfile.txt')
+console.log(data.toString());
+console.log("after reading file");
+
+
+
+
+fs/promises
+https://dev.to/mrm8488/from-callbacks-to-fspromises-to-handle-the-file-system-in-nodejs-56p2
+
+
+
+
+
+Server: will take a request 
+        will process the request
+		 will send a response to the client
+
+networking
+http protocols
+
+
+
+   http module : to create a server 
+
+const http=require('http');
+
+var server=http.createServer((request,response)=>{
+
+});
+
+1st argument will represent request object
+2nd argument will represent response object
+
+the above callback function will be executed when there is a request on the server
+
+
+127.0.0.1
+localhost
+
+127.0.0.1:6000
+localhost:6000
+
+social media 6000
+
+ecommerce 7000
+employee system 8000
+
+
+
+
+
+
+const http=require('http');
+
+var server=http.createServer((request,response)=>{
+    console.log("server is processing the request...");
+    response.write("hii node js server");
+    response.end();
+});
+
+server.listen(7600,()=>{
+    console.log("server is listening on port 7600");
+});
+
+
+
+
+1. pre-defined modules
+   fs, http
+
+2. custom modules / user defined modules
+
+3. 3rd party modules / package
+
+
+npm node package manager
+npm cli
+
+for installation:
+npm install package-name
+npm i package-name
+
+to uninstall:
+npm uninstall package-name
+
+it is always recommended to have package.json file into any project 
+
+.json file should only contain the json objects 
+
+
+package.json file will contain details/informations related to our project:
+eg: name of the project, version, description, author, license, name of dependencies
+
+command to create package.json file
+npm init 
+
+
+npm i express
+
+there are two types of installation for 3rd party packages:
+1. local installation: packages providing functions, classes, variables
+
+2. global installation: packages providing cli 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
