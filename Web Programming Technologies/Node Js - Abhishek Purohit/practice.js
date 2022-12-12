@@ -1,4 +1,4 @@
-var xhr=new XMLHttpRequest();
+//var xhr=new XMLHttpRequest();
 var evenpromise = new Promise((resolve,reject)=>{
 var n=6;
 if(n%2==0){

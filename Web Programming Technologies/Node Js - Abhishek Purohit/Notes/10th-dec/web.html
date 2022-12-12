@@ -33,7 +33,7 @@
     <script>
         function fetchNews(topic){
             var xhr=new XMLHttpRequest();
-            xhr.open('GET',`https://newsdata.io/api/1/news?apikey=pub_14381c7c5b39cc33f27c2218694ac9419a078&country=in&category=${topic}`);
+            xhr.open('GET',`https://newsdata.io/api/1/news?apikey=pub_14381c7c5b39cc33f27c2218694ac9419a078&country=in&category=sports`);
             xhr.onreadystatechange = ()=>{
                 if (xhr.readyState == 4 && xhr.status == 200) {
                     var data=JSON.parse(xhr.responseText);

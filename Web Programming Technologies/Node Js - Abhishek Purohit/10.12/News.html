@@ -18,10 +18,9 @@
         Welcome to our news Application!
       </div>
     </div>
+    <div class="container"></div>
     <div class="container">
-        <div class="row" id="news-container">
-
-        </div>
+      <div class="row" id="news-container"></div>
     </div>
 
     <script
@@ -34,28 +33,46 @@
         var xhr = new XMLHttpRequest();
         xhr.open(
           "GET",
-          "https://newsdata.io/api/1/sources?apikey=YOUR_API_KEY&country=in"
+          `https://newsdata.io/api/1/news?apikey=pub_1446433f9a1ac286387503eac4f6efb85b3fc&country=in&category=health`
         );
         xhr.onreadystatechange = () => {
           if (xhr.readyState == 4 && xhr.status == 200) {
             var data = JSON.parse(xhr.responseText);
-            console.log(data);
-            var newscontainer= document.getElementById('news-container');
-            // for(i=0; i<data.results.length ; i++){
-            //     var col=document.createElement('div');
-            //     col.setAttribute('class','col-lg-6');
-            //     var card = document.createElement('div');
-            //     card.setAttribute('class','card');
-            //     if (data.articles[i].urlToImage) {
-            //         var img = document.createElement('img');
-            //         img.setAttribute('src',data.articles[i].urlToImage);
-            //         img.setAttribute('class','card-img-top');
-            //         card.appendChild(img);
-            //         col.appendChild(card);
-            //     }
-            //     col.innerHTML=data.articles[i].title;
-            //     newscontainer.appendChild(col);
-            // }
+            console.log(data.results);
+            var newscontainer = document.getElementById("news-container");
+            for (i = 0; i < data.results.length; i++) {
+              var col = document.createElement("div");
+              col.setAttribute("class", "col-lg-6 mt-4 mb-4");
+              var card = document.createElement("div");
+              card.setAttribute("class", "card");
+
+              if(data.results[i].image_url){
+                var img = document.createElement("img");
+                img.setAttribute("src", data.results[i].image_url);
+                img.setAttribute("class", "card-img-top");
+                card.appendChild(img);
+              }
+              var cardBody = document.createElement("div");
+              cardBody.setAttribute("class", "card-body");
+              var h5 = document.createElement('h5');
+              h5.setAttribute("class", "card-title");
+              h5.innerHTML = data.results[i].title;
+              cardBody.appendChild(h5);
+              var p=document.createElement('p');
+              p.setAttribute('class','card-text');
+              p.innerHTML=data.results[i].content;
+              card.appendChild(cardBody);
+              cardBody.appendChild(p);
+              var btn=document.createElement('a');
+              btn.setAttribute('class',"btn, btn-primary");
+              btn.innerText="Read More"
+              btn.href=data.results[i].link;
+              cardBody.appendChild(btn);
+              col.appendChild(card);
+              newscontainer.appendChild(col);
+            }
+
+
           }
         };
         xhr.send();
