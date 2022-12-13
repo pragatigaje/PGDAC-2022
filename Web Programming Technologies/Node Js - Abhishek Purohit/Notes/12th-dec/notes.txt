@@ -1,0 +1,193 @@
+Node js is js runtime environment
+
+> we are creating our own servers/web application by writing 
+  plain js code 
+
+> when we want to send a request to any server we need its url
+  
+ www.facebook.com
+ www.facebook.com/login
+ www.facebook.com/signup
+ www.facebook.com/messages
+
+ http
+
+http://localhost:9500
+http://localhost:9500/login
+http://localhost:9500/factorial
+
+Routing : based on url we need to process requests differently and 
+send different different response on each url
+
+step 1: we have to get the current url on the server 
+
+step 2: apply conditions over the url
+        if (url=="http://localhost:9500"){
+				
+			}
+			else if (url=="http://localhost:9500/login"){
+				
+			}
+
+
+
+express is framework which is used to develop server applications
+
+two ways to include a module in js file:
+1. require() function
+2. import statement
+
+const http=require('http')
+http.createServer()
+
+import {functions} from 'package-name';
+
+import {createServer} from 'http';
+
+createServer()
+
+
+.js 
+
+common js
+ES
+
+import reference from 'module'
+
+import express from 'express';
+
+express()
+
+
+
+Routing:
+
+url - function(req,res)
+request method
+
+GET http://localhost:9700/
+POST http://localhost:9700/
+
+> we have to define a thing that when there is a get
+request on a url, then which function has to be executed
+
+> when there is post request on a url then which function
+has to be executed
+
+
+GET url1 fun
+GET url2 fun 
+url3 
+url4
+
+
+http://localhost:9700/  BASE URL
+
+www.facebook.com BASE URL
+
+
+
+> while sending request on any server 
+we can maintain some data on the url
+and that data will be known as url parameter
+
+http://localhost:9700/sum/7/2
+when we are sending a request on a server
+and we need to send some data also
+then request body will be the solution
+
+postman : api client
+thunder client
+ 
+> by default express application will not know
+that a can may have a request body and that too 
+will be of json type
+
+middleware 
+
+> a request arrives on server, at the same moment 
+  the request starts processing 
+
+
+> if we put a logic  before the processing of our
+request 
+
+request arrival 
+logic  -> middleware
+request processing
+
+/sum
+/login
+/register
+/update
+.
+.
+.
+.
+1000 urls
+
+app.use(middleware)
+app.use(express.json())
+
+status code
+
+successful -> 200 201 204 203
+failure -> client -> 4
+        -> server -> 5 
+           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

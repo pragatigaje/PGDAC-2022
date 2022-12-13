@@ -1,0 +1,15 @@
+{
+  "name": "myserver",
+  "version": "1.0.0",
+  "description": "dummy server app",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Arvind",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
