@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MovieTicket</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <style>
+      h3 {
+        font-size: 30px;
+        color: red;
+        font-family: ui-sans-serif;
+        background-color: black;
+        text-align: center;
+        padding: 12px;
+        word-spacing: 5px;
+      }
+      form {
+        margin-left: 40px;
+      }
+      .form-control {
+        width: 200px;
+      }
+      .btn-sm {
+        margin: 5px;
+        width: 100px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h3>WPT MovieTicketBooking Pragati Gaje 220940320077 Kharghar</h3>
+    <form id="movieTicketFrom" action="" onsubmit="Add()">
+      <div class="col-md-4">
+        <label for="movietitle" class="form-label">Movie Title</label>
+        <input
+          type="text"
+          pattern="[A-Za-z]{1,64}"
+          class="form-control form-control"
+          id="movietitle"
+          required
+        />
+      </div>
+
+      <div class="col-md-4">
+        <label for=" movieid" class="form-label">Movie Id</label>
+        <input
+          type="text"
+          pattern="[1-9]{1,4}"
+          class="form-control form-control"
+          id="movieid"
+          required
+        />
+      </div>
+
+      <div class="col-md-4">
+        <label for=" movieticket" class="form-label">Movie Ticket</label>
+        <input
+          type="text"
+          pattern="[1-9]{1,4}"
+          class="form-control form-control"
+          id="movieticket"
+        />
+      </div>
+
+      <div class="col-md-4">
+        <label for=" movietheater" class="form-label">Movie Theater</label>
+        <input
+          type="text"
+          pattern="[A-Za-z]{1,64}"
+          class="form-control form-control"
+          id="movietheater"
+        />
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-primary" type="submit" onclick="Add()">
+          Submit
+        </button>
+      </div>
+    </form>
+
+    <div>
+      <table class="table">
+        <thead id="head">
+          <tr class="table-dark">
+            <th scope="col">Movie Title</th>
+            <th scope="col">Movie Id</th>
+            <th scope="col">Movie ticket</th>
+            <th scope="col">Movie Theater</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody id="body">
+          <tr id="roww">
+            <td>Kantara</td>
+            <td>001</td>
+            <td>299</td>
+            <td>PVR,Mumbai</td>
+            <td>
+              <button class="btn-sm">Edit</button
+              ><button class="btn-sm">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script>
+      (() => {
+        "use strict";
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll(".needs-validation");
+
+        // Loop over them and prevent submission
+        Array.from(forms).forEach((form) => {
+          form.addEventListener(
+            "submit",
+            (event) => {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script>
+    <script>
+      function Add() {
+        var title = document.getElementById("movietitle").value;
+        var id = document.getElementById("movieid").value;
+        var ticket = document.getElementById("movieticket").value;
+        var theater = document.getElementById("movietheater").value;
+
+        var tr = document.createElement("tr");
+        var td1 = tr.appendChild(document.createElement("td"));
+        var td2 = tr.appendChild(document.createElement("td"));
+        var td3 = tr.appendChild(document.createElement("td"));
+        var td4 = tr.appendChild(document.createElement("td"));
+
+        td1.innerHTML=title;
+        td2.innerHTML=id;
+        td3.innerHTML=ticket;
+        td4.innerHTML=theater;
+
+
+
+        // let parent = document.getElementById("body");
+        // let child = document.getElementById("roww");
+
+        // parent.appendChild(newRow);
+
+        // var table = document.getElementById("table");
+        // var row = table.insertRow(1);
+        // var cel1 = row.insertCell(0);
+        // var cel2 = row.insertCell(1);
+        // var cel3 = row.insertCell(2);
+        // var cel4 = row.insertCell(3);
+        // var cel5 = row.insertCell(4);
+
+        // let parent = document.querySelector("#body");
+        // let item = document.querySelectorAll(".form-control");
+        let newRow = `<tr id="roww">
+                    <td>Kantara</td>
+                    <td>001</td>
+                    <td>299</td>
+                    <td>PVR,Mumbai</td>
+                    <td><button class="btn-sm">Edit</button><button class="btn-sm">Delete</button></td>
+                </tr>`;
+        // parent.appendChild();
+      }
+
+      function delete(){
+        document.removeChild();
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+we can create a server
+we can manage all the routes
+we can pass some data on the url
+we can also pass some data in the request body
+
+> we are not having any UI (frontend)
+> our server is only responding with either string or json
+> for any web app, the frontend is also vv imp
+> as of now we have to send the html files in the response 
+> our frontend/html code should be able to display the dynamic data sent
+  by server
+  eg: server has sent an array of json objects 
+  h1
+  p
+  
+template engine:
+when we have to respond with a template and that template should display
+or render some dynamic data then we don't need to create html files
+by ourselves and also we don't have to manipulate the dom in js manually
+
+template engine will generate html 
+we just have to give our dynamic data to the template engine
+var f=120;
+h1=f
+if condidition
+	h1
+else
+   p
+
+PUG is a template engine
+
+npm i pug
+
+https://expressjs.com/en/guide/using-template-engines.html
+
+instead of the html files, we have to create pug files 
+instead of writing html tag syntax we need to follow the pug syntax
+
+create a folder views
+
+.html file:
+<html>
+	<head>
+		<title>My title</title>
+	</head>
+	<body>
+		<h1>Welcome to our app</h1>
+	</body>
+</html>
+
+
+
+.pug file:
+
+html
+	head
+		title My web page
+	body
+		h1 Welcome to our app
+
+<a href=''></a>
+<input type="" placeholder="" name="">
+
+a(href='')
+input(type='',placeholder='')
+
+
+<form action="url" method="">
+
+
+
+
+
+
+
+
+
+

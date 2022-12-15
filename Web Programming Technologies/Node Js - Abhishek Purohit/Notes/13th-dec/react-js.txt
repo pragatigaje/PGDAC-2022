@@ -1,0 +1,272 @@
+React Js:
+react js is a library to develop frontend of any web application
+/ client
+
+
+React Native is a library to develop modile apps (android/ios)
+
+
+
+A usual approach of creating a web app without react js
+eg: school website
+
+1. Home.html
+2. About.html
+3. ContactUs.html
+4. Admissions.html
+5. Director's Message.html
+.
+.
+.
+.
+.
+50 pages 
+
+
+
+on every page there has to be one navigation bar
+20 lines of code
+
+
+
+
+React js:
+we can make html code reusable 
+in react js we are not supposed to create multiple web pages
+react js is used to create single page applications
+only one html page will be there 
+
+
+instead of creating multiple html files we will create
+components
+
+component : ui element visible on the web 
+
+react js will follow component based architecture
+
+Home.js 
+About.js
+ContactUs.js
+Admissions.js
+Navbar.js
+Footer.js
+
+components will be rendered on the single html file
+
+declarative
+imperative 
+
+
+react js will provide a cli
+
+npm i create-react-app -g
+
+create-react-app my-app
+
+nodemon 
+create-react-app
+
+in js, a new thing has been introduced
+to use any 3rd party cli, we don't need to install them
+we can directly run them without installation
+
+
+npx nodemon index.js
+npx create-react-app my-app
+
+with any new react app/project
+we will get an already defined component
+and that is App component
+
+src/App.js
+App component will be displayed first
+index.js -> App component
+
+
+How to create a component in react js:
+
+in react js there are two types of components:
+1. function component: to create a component if we are defining
+a function only
+
+2. class component: to create a component if we are creating a 
+class 
+
+in earlier versions of the react js, there are only 
+class components 
+
+Home.js
+export function Home(){
+	return (
+		<div>
+			<h1>Welcome to my app</h1>
+			<p>This is a dummy home component</p>
+		</div>
+	);
+
+}
+
+NavigationBar.js
+export function NavigationBar(){
+	return (
+		......
+	);
+
+}
+
+in react js, the name given to the component will become
+the name of the tag to display it
+
+<NavigationBar></NavigationBar>
+<Home></Home>
+
+
+
+NavigationBar.js
+
+import {Component} from 'react';
+export class NavigationBar extends Component{
+	render(){
+		return (
+			....
+		);
+	}
+}
+
+If we want to consider our own class as class component
+then we have to inherit an already defined class (Component)
+
+name given to the class component will become the name of the
+tag
+<NavigationBar></NavigationBar>
+
+
+
+<a href=""></a>
+<input type="" placeholder="">
+
+as in html, tags are having attributes
+so in that same way
+in react js, components will also have attributes/props
+
+html : tags attributes
+react : components props 
+
+we can pass some data using props into the component
+
+
+<Home name='Ajay' age='24'></Home>
+
+function component:
+the props passed in the component tag will become 
+argument of the function component
+
+function Home(props){
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
