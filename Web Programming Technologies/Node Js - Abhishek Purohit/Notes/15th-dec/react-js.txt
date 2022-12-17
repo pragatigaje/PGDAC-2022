@@ -1,0 +1,692 @@
+React Js:
+react js is a library to develop frontend of any web application
+/ client
+
+
+React Native is a library to develop modile apps (android/ios)
+
+
+
+A usual approach of creating a web app without react js
+eg: school website
+
+1. Home.html
+2. About.html
+3. ContactUs.html
+4. Admissions.html
+5. Director's Message.html
+.
+.
+.
+.
+.
+50 pages 
+
+
+
+on every page there has to be one navigation bar
+20 lines of code
+
+
+
+
+React js:
+we can make html code reusable 
+in react js we are not supposed to create multiple web pages
+react js is used to create single page applications
+only one html page will be there 
+
+
+instead of creating multiple html files we will create
+components
+
+component : ui element visible on the web 
+
+react js will follow component based architecture
+
+Home.js 
+About.js
+ContactUs.js
+Admissions.js
+Navbar.js
+Footer.js
+
+components will be rendered on the single html file
+
+declarative
+imperative 
+
+
+react js will provide a cli
+
+npm i create-react-app -g
+
+create-react-app my-app
+
+nodemon 
+create-react-app
+
+in js, a new thing has been introduced
+to use any 3rd party cli, we don't need to install them
+we can directly run them without installation
+
+
+npx nodemon index.js
+npx create-react-app my-app
+
+with any new react app/project
+we will get an already defined component
+and that is App component
+
+src/App.js
+App component will be displayed first
+index.js -> App component
+
+
+How to create a component in react js:
+
+in react js there are two types of components:
+1. function component: to create a component if we are defining
+a function only
+
+2. class component: to create a component if we are creating a 
+class 
+
+in earlier versions of the react js, there are only 
+class components 
+
+Home.js
+export function Home(){
+	return (
+		<div>
+			<h1>Welcome to my app</h1>
+			<p>This is a dummy home component</p>
+		</div>
+	);
+
+}
+
+NavigationBar.js
+export function NavigationBar(){
+	return (
+		......
+	);
+
+}
+
+in react js, the name given to the component will become
+the name of the tag to display it
+
+<NavigationBar></NavigationBar>
+<Home></Home>
+
+
+
+NavigationBar.js
+
+import {Component} from 'react';
+export class NavigationBar extends Component{
+	render(){
+		return (
+			....
+		);
+	}
+}
+
+If we want to consider our own class as class component
+then we have to inherit an already defined class (Component)
+
+name given to the class component will become the name of the
+tag
+<NavigationBar></NavigationBar>
+
+
+
+<a href=""></a>
+<input type="" placeholder="">
+
+as in html, tags are having attributes
+so in that same way
+in react js, components will also have attributes/props
+
+html : tags attributes
+react : components props 
+
+we can pass some data using props into the component
+inside a component, we just can't change the value of the props
+
+<Home name='Vikram' age='24'></Home>
+
+function component:
+the props passed in the component tag will become 
+argument of the function component
+
+function Home(props){
+
+}
+
+
+class component:
+<Home name='Vikram' age='24'></Home>
+
+for any class component, all the props will be assigned into
+the instance property of the class and the name of that property
+is props
+we have to refer props property as this.props
+
+class Home extends Component{
+	
+	render(){
+		return (
+			<div>
+				<h1>Welcome {this.props.name} </h1>
+				<p>You are {this.props.age} years old</p>
+			</div>
+		);
+	}
+
+}
+
+
+Any component can have 2 types of properties:
+1. that can't be changed (we can use props for them)
+2. that has to be changed (state)
+
+any component can have these 2 things:
+1. props
+2. state
+
+earlier in any react js only the class components has the 
+feature of the state
+but in the latest versions of the react js function components
+can also make use of the state feature
+
+
+ScoreBoard
+score
+
+  0
+
++  -
+
+for any class component state will be an instance variable
+and state variable is being already defined in any class component
+
+this.state={
+	score:0,
+	name:'Ajay'
+}
+
+
+<input type="button" onclick="fun()">
+
+in react js, we don't need to call a function on any event manuallyi
+
+in react js, to handle any event we have to pass a function to that
+event
+when that particular event gets fired then passed function
+will be called internally by react js
+
+when state is updated/gets changed then render function
+is called again
+
+
+diffy algorithm
+render
+render
+
+reconceliation
+
+
+state, lifecycle functions 
+
+
+hooks is the feature which is introduced in function component
+just to hook the features of class components into the function
+component
+
+by using hooks we can use class component features
+into function components
+
+technically hooks are the functions using which features  of
+class components are being used into function components
+
+there is a naming convention of the hooks functions
+every hook function should start with a prefix use
+
+
+useState() hook is used to create a state into function component
+
+useEffect()
+useMemo()
+useCallback()
+useRef()
+
+
+in function component we are not having setState function
+
+in function component developer has to give the name to the state
+and also name to the function which will change that state
+
+(note: we only have to give name to the function, we don't need to
+write its definition)
+
+
+const [stateName,function-name]=useState(initial-value)
+
+const [score,setScore]=useState(0)
+const [name,setName]=useState('Ajay')
+
+
+Handling form data in react js:
+
+1. to store the form data state will be used
+
+2. when user has started typing into the field then 
+   assign that data into the state
+   (for each field there will be a state)
+
+3. on the submit event we need to get data from the state
+   
+
+<input type='text' id='field'>
+
+document.getElemenetById('field').value
+event.target.value
+
+in react js if a function is executing on any event
+then that function will have access to the event object
+
+
+var keyName="id";
+
+var obj={phone:'9999',[keyName]:101}
+
+{[event.target.name]:event.target.value}
+
+
+const [formData,setFormData] = useState({});
+
+
+handleChange=(event)=>{
+		
+}
+
+
+this.state={
+	
+}
+
+option 1:
+100 fields 100 states
+useState() name
+useState() phone
+
+option 2:
+const [formData,setFormData]=useState({})
+
+key-name: name given to field
+value: value typed by the user
+
+var obj1={id:101,name:'ajay'};
+
+var obj2={email:'ajay@mail.com',phone:'888111'};
+
+var obj3 = {obj1,obj2}
+
+obj3 is object of objects
+
+{
+	obj1:{id:101,name:'ajay'},
+	obj2:{email:'ajay@mail.com',phone:'888111'}
+}
+
+... 
+
+var obj3={...obj1,...obj2}
+         {id:101,name:'ajay',email:'ajay@mail.com',phone:'888111'}
+
+
+
+
+Routing
+
+Home 
+About Us
+Contact Us
+Login 
+Sign Up
+
+Based on url we need to load/open different components
+
+
+react-router-dom will provide us some components using which
+we can define the routing mechanism
+
+npm i react-router-dom -s
+
+in react-router-dom we are getting 3 components
+1. BrowserRouter: we have to encapsulate entire app into this component
+
+2. Routes: this will be the container of all the Route components
+3. Route: will contain mapping of the url with component
+   <Routes>
+		<Route path='/' element={<Home></Home>}></Route>
+   		<Route path='/score-board' element={<ScoreBoard>}></Route>
+   </Routes>
+
+   <Link>
+   
+
+Bootstrap with react js:
+
+web.html  including bs css and js
+50 html files
+
+
+<div class='container'>
+	<div class="row">
+		<div class="col-lg-6">
+			<div class='alert alert-primary'>
+			</div>
+		</div>
+		<div class="col-lg-6">
+		</div>
+	</div>
+</div>
+
+
+for react applications a library is there i.e. 
+react-bootstrap
+intead of writing classes on to the html tags 
+we are getting already defined components
+
+<Container>
+	<Row>
+		<Col lg={6}>
+			<Alert variant='success'>
+			</Alert>
+		</Col>
+		<Col lg={6}></Col>
+	</Row>
+</Container>
+
+
+for react-bootstrap navbar, to provide links that will not
+reload the browser we need LinkContainer component 
+
+react-bootstrap
+react-router-dom
+
+react-router-bootstrap
+
+
+
+class components:
+lifecycle functions of class component
+
+1. constructor
+2. render 
+3. componentDidMount (will be called after the initial render)
+4. componentDidUpdate 
+	(will be called everytime when component has been updated)
+
+shouldComponentUpdate (return true/false)
+componentWillUnmount
+componentDidUpdate
+
+
+fetch data from a server and display that data on the ui
+ajax request
+
+constructor-> 
+render -> shimmer effect
+componentDidMount-> api 10 seconds 
+                    call the api and fetch the data from api and store that data into the state
+
+11.55 am fetched data in didMount
+11.57 am fetched data in didMount
+
+we are comparing states for the difference
+old state with the new state
+
+1. call render everytime 
+2. call render only when we have new data in the state : PureComponents
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

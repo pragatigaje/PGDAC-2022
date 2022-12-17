@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import { Alert,Col,Container, Row,Card,Button } from 'react-bootstrap';
+import { Alert,Container, Row } from 'react-bootstrap';
 import { getTopHeadlines } from '../Service/NewsApiService';
+import { Article } from './Article';
 
 
 export default class TopHeadlines extends Component {
@@ -26,16 +27,7 @@ export default class TopHeadlines extends Component {
                 {
                     this.state.news.map((item)=>{
                         return(
-                            <Col lg={6}>
-                                <Card>
-                                    <Card.Img variant="top" src={item.urlToImage} />
-                                    <Card.Body>
-                                        <Card.Title>{item.title}</Card.Title>
-                                        <Card.Text>{item.description}</Card.Text>
-                                        <Button variant="primary" href='{item.url}'>Read More</Button>
-                                    </Card.Body>
-                                </Card>
-                            </Col>
+                            <Article article={item}></Article>
                         )
                     })
                 }
