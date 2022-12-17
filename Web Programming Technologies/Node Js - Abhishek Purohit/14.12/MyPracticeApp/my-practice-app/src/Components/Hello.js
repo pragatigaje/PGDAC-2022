@@ -6,7 +6,7 @@ export class Hello extends Component{
         return(
             <div>
                 <h1>Hello {this.props.name}</h1>
-<p>From class Component</p>
+                <p>From class Component</p>
             </div>
         )
     }

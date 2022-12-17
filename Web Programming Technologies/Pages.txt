@@ -1,0 +1,11 @@
+Header
+Footer
+About
+Brands
+Sale
+Sign up/Login
+Cart
+Contact us
+Privacy Policy
+
+https://github.com/nikhilmane81/SneakerHead-React.git
