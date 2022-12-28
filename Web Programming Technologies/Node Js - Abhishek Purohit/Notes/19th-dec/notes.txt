@@ -1,0 +1,389 @@
+Composition
+Inheritance
+Specialization
+Context API
+
+Redux 
+
+
+
+Composition and Inheritance
+
+TopHeadlines / AllNews: Container / Parent
+
+Article: Contained / Child 
+
+<Container>
+
+	<Row>
+		<Col>
+		</Col>
+		<Col>
+		</Col>
+	</Row>
+
+</Container>
+
+
+
+Dialog Modal
+
+Form-> Success Dialog
+StudentsList Table -> Confirmation Dialog
+Login -> form in the dialog  
+
+DialogBox.js
+but while creating this re-usable component
+we don't know its child elements 
+
+We only know about its structure not about its child elements
+we want few dialog boxes:
+1. Success Dialog
+2. Confirm Dialog
+3. Login form dialog
+
+<Modal.Dialog>
+        <Modal.Header closeButton>
+          <Modal.Title>{props.title}</Modal.Title>
+        </Modal.Header>
+
+        <Modal.Body>
+          {props.children}
+        </Modal.Body>
+
+        <Modal.Footer>
+          <Button variant="secondary">Close</Button>
+          <Button variant="primary">Save changes</Button>
+        </Modal.Footer>
+      </Modal.Dialog>
+
+RegistrationForm.js:
+
+export function RegistrationForm(){
+	return (
+		<>
+
+			<DialogBox title=''>
+					<p>Registration completed !</p>
+			</DialogBox>		
+		</>
+	);
+	
+}
+
+RegistrationForm.js:
+
+export function StudentsList(){
+	return (
+		<>
+
+			<DialogBox title=''>
+					<p>Are you sure... ?</p>
+			</DialogBox>		
+		</>
+	);
+	
+}
+
+
+LogiForm.js:
+
+
+export function Login(){
+	return (
+		<>
+
+			<DialogBox>
+					<form>
+						
+					</form>
+			</DialogBox>		
+		</>
+	);
+	
+}
+
+
+
+
+FancyBorder.js:
+
+<Container>
+	
+</Container>
+
+
+
+
+Welcome.js   h1 and p
+
+export function Welcome(){
+	return (
+		<FancyBorder>
+			<h1>Welcome </h1>
+			<p>.........</p>
+		</FancyBorder>
+	);
+}
+
+Login.js form with 2 fields
+
+SignUp.js form with 10 fields
+
+
+whenever we pass child elements into the parent element
+there is a props which automatically gets populated i.e children
+
+
+
+SplitPane.js:
+
+export function SplitPane(props){
+
+	return (
+
+			<Container>
+					<Row>
+						<Col lg={6}>
+								{props.left}
+						</Col>
+						<Col lg={6}>
+								{props.right}
+						</Col>
+					</Row>
+			</Container>
+	);
+}
+
+LoginForm.js
+
+
+Left : image
+Right : form
+
+
+
+<SplitPane left={<img>} right={<form></form>}>
+</SplitPane>
+
+
+
+ErrorBoundary:
+is like exception handling for the components/ui
+
+Home
+TopHeadlines : error in header component
+AllNews
+
+
+by default, when there is an error in any component , whole application
+is going to suffer (app will be crashed with an error)
+
+
+now we must prevent this thing
+By using ErrorBoundary we can catch the errors we can listen to the errors
+and if there is any error then in that case we can display one fallback ui
+
+
+ErrorBoundary will listen to the errors which are there in the child components
+not in itself 
+
+
+
+
+redux:
+
+
+C1 state
+C2
+C3
+C4
+C5
+.
+.
+.
+.
+.
+C20 
+
+TopHeadlines
+Article
+
+props drilling 
+
+function C1(){
+  const [x,setX]=useState(100)
+	return (
+		<C2 data={x}>
+			
+		</C2>
+	);
+}
+
+
+
+
+
+function C2(props){
+return (
+	<C3 data={props.data}>
+
+	</C3>
+);
+
+}
+
+function C3(props){
+return (
+	<C4 data={props.data}>
+
+	</C4>
+);
+
+}
+c1 c2 c3 c4 c5.... c20
+
+
+
+redux is state management tool
+
+3 basic components:
+1. action: is just an object which contains the name of the operations
+			  INCREMENT, DECREMENT	
+           note: action will not perform anything...it will not execute any logics
+
+	{type:'INCREMENT'}
+	{type:'DECREMENT'}
+
+2. reducer: is a function, that will execute logic for the suitable action
+				for every action there will be one reducer
+				reducer will have an access to action and store 
+
+				(state,action)=>{
+					switch(action.type){
+						case 'INCREMENT':return state+1;
+						case 'DECREMENT':return state-1;
+						default: return state;
+					}
+				}
+				
+				reducer function will have two arguments
+				1st is state in the store and 2nd is action which is currently dispatched
+				
+3. store : will contain the state globally
+
+   configureStore()
+
+
+1st an action has to be fired/dispatched
+based on the action dispatched ,suitable reducer will be executed
+
+
+npm i redux react-redux @reduxjs/toolkit -s
+
+
+in any application, we can have multiple reducers
+and configureStore needs only a single reducer as a reference
+
+we can combine all the reducers to create a single root reducer
+
+combineReducer
+
+
+
+
+
+we have to tell react js that this time our state provider is going to be changed
+
+this time if using redux then state provider will be our store which is there in store.js file
+
+
+in index.js file, we need to create a component/tag i.e Provider
+
+
+
+
+http://localhost:9200/students/101  PUT
+{
+
+}
+
+update student set name='',marks=''... where id=req.params.id
+
+
+
+Client:
+
+in StudentsList every row of the table will have an edit button
+way of displaying edit btn is same as of delete btn
+
+when user will click the edit btn, capture the student id and open a new component
+in which there will be a form
+
+that form will contain the data in the fields autofilled
+fetch data by id 
+pass that data into value attribute of the input fields
+
+after writing new data into the fields user will click submit btn
+on click of submit btn call update api 
+
+https://www.freecodecamp.org/news/how-to-perform-crud-operations-using-react/
+
+put files into the folder of ur server project
+and insert path of the image in database 
+
+KBs MBs
+
+https://www.tutsmake.com/upload-image-in-mysql-using-node-js-and-react-js/
+
+abhishekpurohit89@gmail.com
+7000221871
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

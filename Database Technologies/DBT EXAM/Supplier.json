@@ -1,0 +1,37 @@
+[
+	{
+		"id" : "A1",
+		"brand" : "Jordan",
+		"info" : "Air Jordan 1 Mid SEs",
+		"price" : 11865,
+		"img" : null
+	},
+	{
+		"id" : "A2",
+		"brand" : "Jordan",
+		"info" : "Air Jordan 1 Mid SE Craft",
+		"price" : 11867,
+		"img" : null
+	},
+	{
+		"id" : "A3",
+		"brand" : "Jordan",
+		"info" : "Air Jordan 1 Zoom CMFT",
+		"price" : 11297,
+		"img" : null
+	},
+	{
+		"id" : "A4",
+		"brand" : "Jordan",
+		"info" : "Air Jordan 1 Retro OG",
+		"price" : 15995,
+		"img" : null
+	},
+	{
+		"id" : "A5",
+		"brand" : "Jordan",
+		"info" : "Air Jordan 2 Retro",
+		"price" : 18395,
+		"img" : null
+	}
+]
