@@ -1,0 +1,15 @@
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Assignments\Employee\bin\Debug\net6.0\Employee1.exe
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Assignments\Employee\bin\Debug\net6.0\Employee1.deps.json
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Assignments\Employee\bin\Debug\net6.0\Employee1.runtimeconfig.json
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Assignments\Employee\bin\Debug\net6.0\Employee1.dll
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Assignments\Employee\bin\Debug\net6.0\Employee1.pdb
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Assignments\Employee\obj\Debug\net6.0\Employee1.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Assignments\Employee\obj\Debug\net6.0\Employee1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Assignments\Employee\obj\Debug\net6.0\Employee1.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Assignments\Employee\obj\Debug\net6.0\Employee1.AssemblyInfo.cs
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Assignments\Employee\obj\Debug\net6.0\Employee1.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Assignments\Employee\obj\Debug\net6.0\Employee1.dll
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Assignments\Employee\obj\Debug\net6.0\refint\Employee1.dll
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Assignments\Employee\obj\Debug\net6.0\Employee1.pdb
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Assignments\Employee\obj\Debug\net6.0\Employee1.genruntimeconfig.cache
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Assignments\Employee\obj\Debug\net6.0\ref\Employee1.dll

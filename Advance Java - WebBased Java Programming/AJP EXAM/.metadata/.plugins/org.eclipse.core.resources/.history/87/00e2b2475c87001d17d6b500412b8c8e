@@ -1,0 +1,5 @@
+package com.pragati.dao;
+
+public class PassengerDaoImpl {
+
+}

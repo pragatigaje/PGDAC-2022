@@ -1,0 +1,7 @@
+package com.pragati.service;
+
+import com.pragati.model.Passenger;
+
+public interface PassengerService {
+	void add(Passenger passenger);
+}

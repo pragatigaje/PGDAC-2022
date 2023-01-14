@@ -1,0 +1,5 @@
+package com.pragati.model;
+
+public class Passenger {
+
+}

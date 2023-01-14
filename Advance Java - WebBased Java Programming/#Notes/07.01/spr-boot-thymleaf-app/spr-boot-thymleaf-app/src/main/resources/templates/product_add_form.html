@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Product</title>
+<script type="text/javascript" src="webjars/jquery/2.2.4/jquery.min.js" ></script>
+<script type="text/javascript">
+
+$(document).ready(function () {
+
+    $("#product_form").submit(function (event) {
+        event.preventDefault();
+
+        var product = {}
+        
+        product["name"] = $("#name").val();
+        product["price"] = $("#price").val();
+
+        $("#bth_submit").prop("disabled", true);
+
+        $.ajax({
+            type: "POST",
+            contentType: "application/json",
+            url: "http://localhost:8080/product",
+            data: JSON.stringify(product),
+            dataType: 'json',
+            cache: false,
+            timeout: 600000,
+            success: function (data) {
+
+                var json = JSON.stringify(data, null, 4);
+                $('#feedback').html(json);
+
+                $("#bth_submit").prop("disabled", false);
+
+            },
+            error: function (e) {
+                var json = e.responseText;
+                $('#feedback').html(json);
+                $("#bth_submit").prop("disabled", false);
+            }
+        });
+    		
+        
+    });
+
+});
+
+</script>
+
+</head>
+<body>
+		<div style="text-align: center" >
+        <div id="feedback"></div>
+		<br>
+        <form id="product_form">
+            	<div>
+                <label >Product Name:</label>
+                     <input type="text" id="name"/>
+                </div>
+				<div>
+                <label >Product Price:</label>
+                     <input type="text" id="price"/>
+                </div>
+                <div >
+                    <button type="submit" id="bth_submit">Add</button>
+                </div>
+           
+        </form>
+	</div>
+</body>
+</html>

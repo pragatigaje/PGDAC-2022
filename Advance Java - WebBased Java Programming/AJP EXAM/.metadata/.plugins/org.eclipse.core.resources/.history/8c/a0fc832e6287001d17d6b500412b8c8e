@@ -1,0 +1,7 @@
+package com.pragati.dao;
+
+import com.pragati.model.Passenger;
+
+public interface PassengerDao {
+	void save(Passenger passenger);
+}

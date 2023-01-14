@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Product</title>
+<script type="text/javascript" src="webjars/jquery/2.2.4/jquery.min.js" ></script>
+
+<script type="text/javascript">
+
+$(document).ready(function () {
+
+    $("#search-form").submit(function (event) {
+
+        //stop submit the form, we will post it manually.
+        event.preventDefault();
+
+        fire_ajax_submit();
+
+    });
+
+});
+
+function fire_ajax_submit() {
+
+    var search = {}
+    
+    search["from"] = $("#from").val();
+    search["to"] = $("#to").val();
+    search["subject"] = $("#subject").val();
+    search["msg"] = $("#msg").val();
+
+    $("#btn-search").prop("disabled", true);
+
+    $.ajax({
+        type: "POST",
+        contentType: "application/json",
+        url: "http://localhost:8080/send_mail",
+        data: JSON.stringify(search),
+        dataType: 'json',
+        cache: false,
+        timeout: 600000,
+        success: function (data) {
+
+            var json = JSON.stringify(data, null, 4);
+            $('#feedback').html(json);
+
+            console.log("SUCCESS : ", data);
+            $("#btn-search").prop("disabled", false);
+
+        },
+        error: function (e) {
+
+            var json = e.responseText;
+            $('#feedback').html(json);
+
+            console.log("ERROR : ", e);
+            $("#btn-search").prop("disabled", false);
+
+        }
+    });
+
+}
+
+</script>
+
+</head>
+<body>
+	<div style="text-align: center" >
+        <div id="feedback"></div>
+		<br>
+        <form id="search-form">
+            
+                <label >From:</label>
+                <br>
+                <div >
+                    <input type="text" id="from" value="abc@gmail.com" />
+                </div>
+                <br>
+                <label >to:</label>
+                <br>
+                <div >
+                    <input type="text" id="to"/>
+                </div>
+                <br>
+                <label >Subject:</label>
+                <br>
+                <div >
+                    <input type="text" id="subject"/>
+                </div>
+                <br>
+                <label >Message:</label>
+                <br>
+                <div >
+                    <input type="text" id="msg"/>
+                </div>
+                <br>
+                <div >
+                    <button type="submit" id="bth-search">Send</button>
+                </div>
+           
+        </form>
+	</div>
+</body>
+</html>

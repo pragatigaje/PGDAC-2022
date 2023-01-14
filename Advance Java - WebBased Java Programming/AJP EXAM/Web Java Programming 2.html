@@ -1,0 +1,274 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web Java Programming 2</title>
+    <meta name="description" content="" />
+    <meta name="ROBOTS" content="NOODP" />
+    
+    
+        <link rel="shortcut icon" href="/static/1673089626/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/static/1673089626/favicon.ico" type="image/x-icon">
+        <link            href="/static/1673089626/css/reboot.css" rel="stylesheet" type="text/css" />
+        <link            href="/static/1673089626/css/quiz.css" rel="stylesheet" type="text/css" />
+        <style type="text/css">
+            body {
+                margin: 20px auto;
+                font-family: "Arial", "Verdana", sans-serif;
+                color:#444;
+                background-color: #9ea4a7;
+                background-color:hsla(214, 5%, 95%, 1);
+                max-width:600px;
+            }
+
+            
+                
+        @media only screen {
+        body {
+            max-width:600px;
+        }
+
+        .quizcss .hover:hover,
+        .quizcss .matching-left > div:hover,
+        .quizcss .matching-right > div:hover,
+        .quizcss .multiple-response-answers > div:hover,
+        .quizcss .matching-response > div:hover,
+        .quizcss .file-adder-over,
+        .quizcss .media-field-data:hover {
+            background-color:#f2f2f3;
+        }
+
+        body, .quizcss .comment-readonly, .quizcss .comment-readonly textarea {
+            background-color:#f2f2f3;
+            color:#000000;
+        }
+
+        .quizcss #next-left svg, .quizcss #next-right svg {
+            color:#000000
+        }
+
+        .quizcss .comment-box:before {
+            color:#000000;
+        }
+        .quizcss .comment-box {
+            box-shadow: #000000 0 0 2px 0;
+        }
+
+        .quizcss .comment-readonly textarea {
+            border:none;
+            outline:none;
+        }
+
+        #login a {
+            color:#000000;
+        }
+
+        .quizcss a {
+            color:#000000;
+            font-weight:bold;
+            text-decoration:underline;
+        }
+
+        .quizcss a:hover {
+            text-decoration:none;
+        }
+
+        .quizcss #tabs a {
+            background-color:#f2f2f3;
+            color:#000000;
+
+        }
+        .quizcss .component,
+        .quizcss #login,
+        .quizcss #tabs a.active {
+            background-color:#ffffff;
+            color:#000000;
+        }
+
+        .quizcss .file-adder {
+            border-color:#000000;
+        }
+
+        .quizcss .component a {
+            color:#000000;
+            font-weight:bold;
+        }
+        .quizcss .warning, .quizcss .the-explanation {
+            background-color:#ffffaf;
+            color:#000000;
+        }
+
+        .quizcss .component-flash {
+            background-color:#ffffaf;
+        }
+
+        .quizcss .progress-left {
+            background-color:#000000;
+        }
+        .quizcss .progress-active {
+            background-color:#000000;
+            opacity:.25;
+        }
+
+        }
+        
+            
+
+            
+        </style>
+        
+            <link            href="/static/1673089626/css/print.css" rel="stylesheet" type="text/css"  media="print" />
+        
+        <script src="/static/1673089626/js/student.js"></script>
+        
+        
+
+        <script>
+            ready(function(){
+                
+                
+                
+            })
+        </script>
+
+    
+    <meta name="robots" content="noindex">
+
+</head>
+<body class="quizcss">
+
+<div id="student-messages">
+    
+    <div style="display:none" id="duplicate-scoresheet" class="django-warning">
+        You are signed in to this test from another device. If possible, you should exit the test on the other device before continuing. If you believe this is an error, you should contact your test administrator.
+        <button type="button" onclick="this.parentElement.parentElement.removeChild(this.parentElement)">Dismiss</button>
+    </div>
+    <div style="display:none" id="error-offline-template" class="django-warning">
+        Network Error: Your response was not saved.
+        <button type="button" onclick="this.parentElement.parentElement.removeChild(this.parentElement)">Dismiss</button>
+    </div>
+    <div style="display:none" id="error-server-template" class="django-warning">
+        Server Error: Your response was not saved.
+        <button type="button" onclick="this.parentElement.parentElement.removeChild(this.parentElement)">Dismiss</button>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-6553843-8']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+    <div class="quiz-header" id="quiz-header">
+        
+    </div>
+
+
+
+<script>
+    var keys_to_remove = []
+    for(var i = 0; i < localStorage.length; i++){
+        var key = localStorage.key(i);
+        if(key.indexOf("test-") == 0){
+            keys_to_remove.push(key);
+        }
+    }
+    for(var i = 0; i < keys_to_remove.length; i++){
+        localStorage.removeItem(keys_to_remove[i]);
+    }
+
+</script>
+
+
+
+
+
+<div id="content" class="quiz">
+
+
+<div id="name">
+    
+
+    <span  id="name-editable">220940320077</span>
+    <br /><span class="lighter">Jan. 10, 2023, 4:46 p.m.</span>
+</div>
+
+<h1 id="title">Web Java Programming 2</h1>
+<div id="conclusion">
+    <p>Submitted</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <form action="/q/12451826/student/logout" method="post">
+        <input type="hidden" name="csrfmiddlewaretoken" value="68qyS8IBjqXwUZgL1CvNAzQIAp0Z8WSmaMOKDQvkKTuO3gqTI8z984KG9kCHKMlU">
+        <div class="buttons">
+            <input type="submit" value="Logout" name="submit"  />
+        </div>
+    </form>
+
+
+</div>
+
+
+<script>
+    (function(){
+        if(window.MATHY_ONCE !== undefined){
+            return;
+        }
+        window.MATHY_ONCE = true;
+
+        function ready(fn) {
+            if (document.readyState != 'loading'){
+                fn();
+            } else {
+                document.addEventListener('DOMContentLoaded', fn);
+            }
+        }
+
+        ready(function(){
+            var find = "m" + "athy";
+            var has_math = document.getElementsByTagName("body")[0].innerHTML.indexOf(find) != -1;
+            if(has_math){
+                var elements = document.querySelectorAll("." + find);
+                for(var i = 0; i < elements.length; i++){
+                    var item = elements[i];
+                    item.innerText = '`' + item.innerText + '`';
+                    //MathJax.Hub.Queue(["Typeset",MathJax.Hub,item]);
+
+                }
+                var script = document.createElement("script");
+                script.setAttribute("type", "text/javascript");
+                script.setAttribute("src", "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=AM_CHTML");
+                document.getElementsByTagName("head")[0].appendChild(script);
+            }
+        });
+    })()
+</script>
+
+
+
+
+</body>
+</html>

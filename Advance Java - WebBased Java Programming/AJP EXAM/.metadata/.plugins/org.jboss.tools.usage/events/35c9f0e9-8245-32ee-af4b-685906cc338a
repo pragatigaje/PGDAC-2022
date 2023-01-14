@@ -1,0 +1,11 @@
+#Thu Dec 29 14:54:59 IST 2022
+ct=jbt
+a=finishWizard
+c=0
+s=3
+d=1672305899207
+v=2.2.500
+vl=How many times the 'Finish' button pressed during the day
+cmp=usage
+cl=org.eclipse.jdt.internal.ui.wizards.NewPackageCreationWizard
+l=Wizard class name

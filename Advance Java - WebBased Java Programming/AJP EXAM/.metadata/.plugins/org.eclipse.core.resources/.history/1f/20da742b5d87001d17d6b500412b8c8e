@@ -1,0 +1,5 @@
+package com.pragati.service;
+
+public interface PassengerService {
+
+}

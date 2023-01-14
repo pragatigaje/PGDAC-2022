@@ -1,0 +1,15 @@
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Day 1\ConstructorsAndObjectInitializer\obj\Debug\net6.0\ConstructorsAndObjectInitializer.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Day 1\ConstructorsAndObjectInitializer\obj\Debug\net6.0\ConstructorsAndObjectInitializer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Day 1\ConstructorsAndObjectInitializer\obj\Debug\net6.0\ConstructorsAndObjectInitializer.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Day 1\ConstructorsAndObjectInitializer\obj\Debug\net6.0\ConstructorsAndObjectInitializer.AssemblyInfo.cs
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Day 1\ConstructorsAndObjectInitializer\obj\Debug\net6.0\ConstructorsAndObjectInitializer.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Day 1\ConstructorsAndObjectInitializer\bin\Debug\net6.0\ConstructorsAndObjectInitializer.exe
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Day 1\ConstructorsAndObjectInitializer\bin\Debug\net6.0\ConstructorsAndObjectInitializer.deps.json
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Day 1\ConstructorsAndObjectInitializer\bin\Debug\net6.0\ConstructorsAndObjectInitializer.runtimeconfig.json
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Day 1\ConstructorsAndObjectInitializer\bin\Debug\net6.0\ConstructorsAndObjectInitializer.dll
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Day 1\ConstructorsAndObjectInitializer\bin\Debug\net6.0\ConstructorsAndObjectInitializer.pdb
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Day 1\ConstructorsAndObjectInitializer\obj\Debug\net6.0\ConstructorsAndObjectInitializer.dll
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Day 1\ConstructorsAndObjectInitializer\obj\Debug\net6.0\refint\ConstructorsAndObjectInitializer.dll
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Day 1\ConstructorsAndObjectInitializer\obj\Debug\net6.0\ConstructorsAndObjectInitializer.pdb
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Day 1\ConstructorsAndObjectInitializer\obj\Debug\net6.0\ConstructorsAndObjectInitializer.genruntimeconfig.cache
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Day 1\ConstructorsAndObjectInitializer\obj\Debug\net6.0\ref\ConstructorsAndObjectInitializer.dll

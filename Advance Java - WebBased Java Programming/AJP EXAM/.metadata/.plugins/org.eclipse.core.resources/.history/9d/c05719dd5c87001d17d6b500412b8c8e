@@ -1,0 +1,28 @@
+package com.pragati.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+import com.pragati.conn.MyConn;
+import com.pragati.model.Passenger;
+
+public class PassengerDaoImpl implements PassengerDao{
+
+	private MyConn myConn;
+	
+	public PassengerDaoImpl() {
+		myConn = new MyConn();
+	}
+
+	@Override
+	public void save(Passenger passenger) {
+		try {
+			Connection con = myConn.getConn();
+			PreparedStatement s = con.prepareStatement("insert into passenger (name, gender, country ,about, mailist) values (?,?,?,?,?)");
+			s.setString(1, passenger.getName());	
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+}

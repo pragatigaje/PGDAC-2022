@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.sql.SQLException"/>
+    <fullyQualifiedTypeName name="com.pragati.model.Expense"/>
+    <fullyQualifiedTypeName name="com.pragati.service.ExpenseService"/>
+    <fullyQualifiedTypeName name="com.pragati.dao.ExpenseDao"/>
+    <fullyQualifiedTypeName name="com.pragati.dao.ExpenseDaoImpl"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="com.pragati.conn.MyConn"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="com.pragati.service.PassengerService"/>
+    <fullyQualifiedTypeName name="com.pragati.dao.PassengerDao"/>
+    <fullyQualifiedTypeName name="com.pragati.dao.PassengerDaoImpl"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.awt.image.RescaleOp"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="java.lang.LinkageError"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.pragati.model.Passenger"/>
+</qualifiedTypeNameHistroy>

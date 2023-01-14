@@ -1,0 +1,20 @@
+package com.pragati.service;
+
+import com.pragati.dao.PassengerDao;
+import com.pragati.dao.PassengerDaoImpl;
+import com.pragati.model.Passenger;
+
+public class PassengerServiceImpl implements PassengerService{
+
+	private PassengerDao passengerDao;
+	
+	public PassengerServiceImpl() {
+		passengerDao = new PassengerDaoImpl();
+	}
+
+	@Override
+	public void add(Passenger passenger) {
+		passengerDao.save(passenger);
+	}
+	
+}

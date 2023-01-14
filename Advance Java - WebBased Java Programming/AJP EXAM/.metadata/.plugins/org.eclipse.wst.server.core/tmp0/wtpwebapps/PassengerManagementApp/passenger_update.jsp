@@ -1,0 +1,8 @@
+<%@page import="com.pragati.model.Passenger"%>
+<%@page import="com.pragati.service.PassengerServiceImpl"%>
+<%@page import="com.pragati.service.PassengerService"%>
+<%
+	PassengerService passengerService = new PassengerServiceImpl();
+	passengerService.modify(passenger);
+	response.sendRedirect("passenger_add_form.jsp");
+%>

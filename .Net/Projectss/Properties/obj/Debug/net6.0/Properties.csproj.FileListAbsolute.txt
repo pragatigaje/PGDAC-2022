@@ -1,0 +1,15 @@
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Day 1\Properties\bin\Debug\net6.0\Properties.exe
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Day 1\Properties\bin\Debug\net6.0\Properties.deps.json
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Day 1\Properties\bin\Debug\net6.0\Properties.runtimeconfig.json
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Day 1\Properties\bin\Debug\net6.0\Properties.dll
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Day 1\Properties\bin\Debug\net6.0\Properties.pdb
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Day 1\Properties\obj\Debug\net6.0\Properties.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Day 1\Properties\obj\Debug\net6.0\Properties.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Day 1\Properties\obj\Debug\net6.0\Properties.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Day 1\Properties\obj\Debug\net6.0\Properties.AssemblyInfo.cs
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Day 1\Properties\obj\Debug\net6.0\Properties.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Day 1\Properties\obj\Debug\net6.0\Properties.dll
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Day 1\Properties\obj\Debug\net6.0\refint\Properties.dll
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Day 1\Properties\obj\Debug\net6.0\Properties.pdb
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Day 1\Properties\obj\Debug\net6.0\Properties.genruntimeconfig.cache
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Day 1\Properties\obj\Debug\net6.0\ref\Properties.dll

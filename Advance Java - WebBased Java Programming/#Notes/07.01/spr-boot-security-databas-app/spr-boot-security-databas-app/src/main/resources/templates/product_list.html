@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Product List</title>
+<script type="text/javascript" src="webjars/jquery/2.2.4/jquery.min.js" ></script>
+
+<script type="text/javascript">
+      
+         $(document).ready(function(){
+            $.getJSON("http://localhost:8080/product", function(result){
+               $.each(result, function(key,value) {
+                  $("#productsJson").append(value.id+" "+value.name+" "+value.price+"<br>");
+               }); 
+            });
+         });
+      </script>
+   </head>
+   
+   <body>
+      <div id = "productsJson" style="text-align: center" > </div>
+   </body>
+</html>
