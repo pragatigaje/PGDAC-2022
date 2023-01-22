@@ -1,0 +1,15 @@
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\LINQDemo\bin\Debug\net6.0\LINQDemo.exe
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\LINQDemo\bin\Debug\net6.0\LINQDemo.deps.json
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\LINQDemo\bin\Debug\net6.0\LINQDemo.runtimeconfig.json
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\LINQDemo\bin\Debug\net6.0\LINQDemo.dll
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\LINQDemo\bin\Debug\net6.0\LINQDemo.pdb
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\LINQDemo\obj\Debug\net6.0\LINQDemo.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\LINQDemo\obj\Debug\net6.0\LINQDemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\LINQDemo\obj\Debug\net6.0\LINQDemo.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\LINQDemo\obj\Debug\net6.0\LINQDemo.AssemblyInfo.cs
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\LINQDemo\obj\Debug\net6.0\LINQDemo.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\LINQDemo\obj\Debug\net6.0\LINQDemo.dll
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\LINQDemo\obj\Debug\net6.0\refint\LINQDemo.dll
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\LINQDemo\obj\Debug\net6.0\LINQDemo.pdb
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\LINQDemo\obj\Debug\net6.0\LINQDemo.genruntimeconfig.cache
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\LINQDemo\obj\Debug\net6.0\ref\LINQDemo.dll

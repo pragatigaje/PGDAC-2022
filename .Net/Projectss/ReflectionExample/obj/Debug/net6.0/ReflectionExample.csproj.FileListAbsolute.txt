@@ -1,0 +1,15 @@
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\ReflectionExample\bin\Debug\net6.0\ReflectionExample.exe
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\ReflectionExample\bin\Debug\net6.0\ReflectionExample.deps.json
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\ReflectionExample\bin\Debug\net6.0\ReflectionExample.runtimeconfig.json
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\ReflectionExample\bin\Debug\net6.0\ReflectionExample.dll
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\ReflectionExample\bin\Debug\net6.0\ReflectionExample.pdb
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\ReflectionExample\obj\Debug\net6.0\ReflectionExample.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\ReflectionExample\obj\Debug\net6.0\ReflectionExample.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\ReflectionExample\obj\Debug\net6.0\ReflectionExample.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\ReflectionExample\obj\Debug\net6.0\ReflectionExample.AssemblyInfo.cs
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\ReflectionExample\obj\Debug\net6.0\ReflectionExample.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\ReflectionExample\obj\Debug\net6.0\ReflectionExample.dll
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\ReflectionExample\obj\Debug\net6.0\refint\ReflectionExample.dll
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\ReflectionExample\obj\Debug\net6.0\ReflectionExample.pdb
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\ReflectionExample\obj\Debug\net6.0\ReflectionExample.genruntimeconfig.cache
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\ReflectionExample\obj\Debug\net6.0\ref\ReflectionExample.dll

@@ -1,0 +1,15 @@
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\LangaugeFeatures\bin\Debug\net6.0\LangaugeFeatures.exe
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\LangaugeFeatures\bin\Debug\net6.0\LangaugeFeatures.deps.json
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\LangaugeFeatures\bin\Debug\net6.0\LangaugeFeatures.runtimeconfig.json
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\LangaugeFeatures\bin\Debug\net6.0\LangaugeFeatures.dll
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\LangaugeFeatures\bin\Debug\net6.0\LangaugeFeatures.pdb
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\LangaugeFeatures\obj\Debug\net6.0\LangaugeFeatures.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\LangaugeFeatures\obj\Debug\net6.0\LangaugeFeatures.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\LangaugeFeatures\obj\Debug\net6.0\LangaugeFeatures.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\LangaugeFeatures\obj\Debug\net6.0\LangaugeFeatures.AssemblyInfo.cs
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\LangaugeFeatures\obj\Debug\net6.0\LangaugeFeatures.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\LangaugeFeatures\obj\Debug\net6.0\LangaugeFeatures.dll
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\LangaugeFeatures\obj\Debug\net6.0\refint\LangaugeFeatures.dll
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\LangaugeFeatures\obj\Debug\net6.0\LangaugeFeatures.pdb
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\LangaugeFeatures\obj\Debug\net6.0\LangaugeFeatures.genruntimeconfig.cache
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\LangaugeFeatures\obj\Debug\net6.0\ref\LangaugeFeatures.dll

@@ -1,0 +1,15 @@
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\EventHandling\bin\Debug\net6.0\EventHandling.exe
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\EventHandling\bin\Debug\net6.0\EventHandling.deps.json
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\EventHandling\bin\Debug\net6.0\EventHandling.runtimeconfig.json
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\EventHandling\bin\Debug\net6.0\EventHandling.dll
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\EventHandling\bin\Debug\net6.0\EventHandling.pdb
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\EventHandling\obj\Debug\net6.0\EventHandling.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\EventHandling\obj\Debug\net6.0\EventHandling.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\EventHandling\obj\Debug\net6.0\EventHandling.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\EventHandling\obj\Debug\net6.0\EventHandling.AssemblyInfo.cs
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\EventHandling\obj\Debug\net6.0\EventHandling.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\EventHandling\obj\Debug\net6.0\EventHandling.dll
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\EventHandling\obj\Debug\net6.0\refint\EventHandling.dll
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\EventHandling\obj\Debug\net6.0\EventHandling.pdb
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\EventHandling\obj\Debug\net6.0\EventHandling.genruntimeconfig.cache
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\EventHandling\obj\Debug\net6.0\ref\EventHandling.dll

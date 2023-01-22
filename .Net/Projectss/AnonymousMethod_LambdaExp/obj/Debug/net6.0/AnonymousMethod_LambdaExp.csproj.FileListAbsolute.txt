@@ -1,0 +1,15 @@
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\AnonymousMethod_LambdaExp\bin\Debug\net6.0\AnonymousMethod_LambdaExp.exe
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\AnonymousMethod_LambdaExp\bin\Debug\net6.0\AnonymousMethod_LambdaExp.deps.json
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\AnonymousMethod_LambdaExp\bin\Debug\net6.0\AnonymousMethod_LambdaExp.runtimeconfig.json
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\AnonymousMethod_LambdaExp\bin\Debug\net6.0\AnonymousMethod_LambdaExp.dll
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\AnonymousMethod_LambdaExp\bin\Debug\net6.0\AnonymousMethod_LambdaExp.pdb
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\AnonymousMethod_LambdaExp\obj\Debug\net6.0\AnonymousMethod_LambdaExp.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\AnonymousMethod_LambdaExp\obj\Debug\net6.0\AnonymousMethod_LambdaExp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\AnonymousMethod_LambdaExp\obj\Debug\net6.0\AnonymousMethod_LambdaExp.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\AnonymousMethod_LambdaExp\obj\Debug\net6.0\AnonymousMethod_LambdaExp.AssemblyInfo.cs
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\AnonymousMethod_LambdaExp\obj\Debug\net6.0\AnonymousMethod_LambdaExp.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\AnonymousMethod_LambdaExp\obj\Debug\net6.0\AnonymousMethod_LambdaExp.dll
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\AnonymousMethod_LambdaExp\obj\Debug\net6.0\refint\AnonymousMethod_LambdaExp.dll
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\AnonymousMethod_LambdaExp\obj\Debug\net6.0\AnonymousMethod_LambdaExp.pdb
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\AnonymousMethod_LambdaExp\obj\Debug\net6.0\AnonymousMethod_LambdaExp.genruntimeconfig.cache
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\Projectss\AnonymousMethod_LambdaExp\obj\Debug\net6.0\ref\AnonymousMethod_LambdaExp.dll
