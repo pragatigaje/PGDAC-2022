@@ -69,7 +69,19 @@ namespace DataBases
                 //column level constraint
                 //ds.Tables["Deps"].Columns["DeptName"].Unique = true;
 
-                Console.WriteLine(ds.Tables[0].Rows[1]);
+                foreach (DataTable table in ds.Tables)
+                {
+                    foreach (DataRow row in table.Rows)
+                    {
+                        foreach (DataColumn column in table.Columns)
+                        {
+                            object item = row[column];
+                            // read column and item
+							Console.Write(item+"    |   ");
+                        }
+                        Console.WriteLine();
+                    }
+                }
             }
             catch (Exception ex)
             {
