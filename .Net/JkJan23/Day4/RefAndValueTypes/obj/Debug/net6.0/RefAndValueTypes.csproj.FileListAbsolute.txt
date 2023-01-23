@@ -1,0 +1,15 @@
+D:\Trainings\JkJan23\Day4\RefAndValueTypes\bin\Debug\net6.0\RefAndValueTypes.exe
+D:\Trainings\JkJan23\Day4\RefAndValueTypes\bin\Debug\net6.0\RefAndValueTypes.deps.json
+D:\Trainings\JkJan23\Day4\RefAndValueTypes\bin\Debug\net6.0\RefAndValueTypes.runtimeconfig.json
+D:\Trainings\JkJan23\Day4\RefAndValueTypes\bin\Debug\net6.0\RefAndValueTypes.dll
+D:\Trainings\JkJan23\Day4\RefAndValueTypes\bin\Debug\net6.0\RefAndValueTypes.pdb
+D:\Trainings\JkJan23\Day4\RefAndValueTypes\obj\Debug\net6.0\RefAndValueTypes.csproj.AssemblyReference.cache
+D:\Trainings\JkJan23\Day4\RefAndValueTypes\obj\Debug\net6.0\RefAndValueTypes.GeneratedMSBuildEditorConfig.editorconfig
+D:\Trainings\JkJan23\Day4\RefAndValueTypes\obj\Debug\net6.0\RefAndValueTypes.AssemblyInfoInputs.cache
+D:\Trainings\JkJan23\Day4\RefAndValueTypes\obj\Debug\net6.0\RefAndValueTypes.AssemblyInfo.cs
+D:\Trainings\JkJan23\Day4\RefAndValueTypes\obj\Debug\net6.0\RefAndValueTypes.csproj.CoreCompileInputs.cache
+D:\Trainings\JkJan23\Day4\RefAndValueTypes\obj\Debug\net6.0\RefAndValueTypes.dll
+D:\Trainings\JkJan23\Day4\RefAndValueTypes\obj\Debug\net6.0\refint\RefAndValueTypes.dll
+D:\Trainings\JkJan23\Day4\RefAndValueTypes\obj\Debug\net6.0\RefAndValueTypes.pdb
+D:\Trainings\JkJan23\Day4\RefAndValueTypes\obj\Debug\net6.0\RefAndValueTypes.genruntimeconfig.cache
+D:\Trainings\JkJan23\Day4\RefAndValueTypes\obj\Debug\net6.0\ref\RefAndValueTypes.dll

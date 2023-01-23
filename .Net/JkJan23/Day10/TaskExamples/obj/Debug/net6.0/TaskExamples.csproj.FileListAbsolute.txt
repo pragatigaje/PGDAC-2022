@@ -1,0 +1,15 @@
+D:\Trainings\JkJan23\Day10\TaskExamples\bin\Debug\net6.0\TaskExamples.exe
+D:\Trainings\JkJan23\Day10\TaskExamples\bin\Debug\net6.0\TaskExamples.deps.json
+D:\Trainings\JkJan23\Day10\TaskExamples\bin\Debug\net6.0\TaskExamples.runtimeconfig.json
+D:\Trainings\JkJan23\Day10\TaskExamples\bin\Debug\net6.0\TaskExamples.dll
+D:\Trainings\JkJan23\Day10\TaskExamples\bin\Debug\net6.0\TaskExamples.pdb
+D:\Trainings\JkJan23\Day10\TaskExamples\obj\Debug\net6.0\TaskExamples.csproj.AssemblyReference.cache
+D:\Trainings\JkJan23\Day10\TaskExamples\obj\Debug\net6.0\TaskExamples.GeneratedMSBuildEditorConfig.editorconfig
+D:\Trainings\JkJan23\Day10\TaskExamples\obj\Debug\net6.0\TaskExamples.AssemblyInfoInputs.cache
+D:\Trainings\JkJan23\Day10\TaskExamples\obj\Debug\net6.0\TaskExamples.AssemblyInfo.cs
+D:\Trainings\JkJan23\Day10\TaskExamples\obj\Debug\net6.0\TaskExamples.csproj.CoreCompileInputs.cache
+D:\Trainings\JkJan23\Day10\TaskExamples\obj\Debug\net6.0\TaskExamples.dll
+D:\Trainings\JkJan23\Day10\TaskExamples\obj\Debug\net6.0\refint\TaskExamples.dll
+D:\Trainings\JkJan23\Day10\TaskExamples\obj\Debug\net6.0\TaskExamples.pdb
+D:\Trainings\JkJan23\Day10\TaskExamples\obj\Debug\net6.0\TaskExamples.genruntimeconfig.cache
+D:\Trainings\JkJan23\Day10\TaskExamples\obj\Debug\net6.0\ref\TaskExamples.dll

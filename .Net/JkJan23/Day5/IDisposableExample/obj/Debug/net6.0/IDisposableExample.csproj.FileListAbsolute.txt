@@ -1,0 +1,15 @@
+D:\Trainings\JkJan23\Day5\IDisposableExample\bin\Debug\net6.0\IDisposableExample.exe
+D:\Trainings\JkJan23\Day5\IDisposableExample\bin\Debug\net6.0\IDisposableExample.deps.json
+D:\Trainings\JkJan23\Day5\IDisposableExample\bin\Debug\net6.0\IDisposableExample.runtimeconfig.json
+D:\Trainings\JkJan23\Day5\IDisposableExample\bin\Debug\net6.0\IDisposableExample.dll
+D:\Trainings\JkJan23\Day5\IDisposableExample\bin\Debug\net6.0\IDisposableExample.pdb
+D:\Trainings\JkJan23\Day5\IDisposableExample\obj\Debug\net6.0\IDisposableExample.csproj.AssemblyReference.cache
+D:\Trainings\JkJan23\Day5\IDisposableExample\obj\Debug\net6.0\IDisposableExample.GeneratedMSBuildEditorConfig.editorconfig
+D:\Trainings\JkJan23\Day5\IDisposableExample\obj\Debug\net6.0\IDisposableExample.AssemblyInfoInputs.cache
+D:\Trainings\JkJan23\Day5\IDisposableExample\obj\Debug\net6.0\IDisposableExample.AssemblyInfo.cs
+D:\Trainings\JkJan23\Day5\IDisposableExample\obj\Debug\net6.0\IDisposableExample.csproj.CoreCompileInputs.cache
+D:\Trainings\JkJan23\Day5\IDisposableExample\obj\Debug\net6.0\IDisposableExample.dll
+D:\Trainings\JkJan23\Day5\IDisposableExample\obj\Debug\net6.0\refint\IDisposableExample.dll
+D:\Trainings\JkJan23\Day5\IDisposableExample\obj\Debug\net6.0\IDisposableExample.pdb
+D:\Trainings\JkJan23\Day5\IDisposableExample\obj\Debug\net6.0\IDisposableExample.genruntimeconfig.cache
+D:\Trainings\JkJan23\Day5\IDisposableExample\obj\Debug\net6.0\ref\IDisposableExample.dll

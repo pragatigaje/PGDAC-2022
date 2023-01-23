@@ -1,0 +1,15 @@
+D:\Trainings\JkJan23\Day3\Interfaces\bin\Debug\net6.0\Interfaces.exe
+D:\Trainings\JkJan23\Day3\Interfaces\bin\Debug\net6.0\Interfaces.deps.json
+D:\Trainings\JkJan23\Day3\Interfaces\bin\Debug\net6.0\Interfaces.runtimeconfig.json
+D:\Trainings\JkJan23\Day3\Interfaces\bin\Debug\net6.0\Interfaces.dll
+D:\Trainings\JkJan23\Day3\Interfaces\bin\Debug\net6.0\Interfaces.pdb
+D:\Trainings\JkJan23\Day3\Interfaces\obj\Debug\net6.0\Interfaces.csproj.AssemblyReference.cache
+D:\Trainings\JkJan23\Day3\Interfaces\obj\Debug\net6.0\Interfaces.GeneratedMSBuildEditorConfig.editorconfig
+D:\Trainings\JkJan23\Day3\Interfaces\obj\Debug\net6.0\Interfaces.AssemblyInfoInputs.cache
+D:\Trainings\JkJan23\Day3\Interfaces\obj\Debug\net6.0\Interfaces.AssemblyInfo.cs
+D:\Trainings\JkJan23\Day3\Interfaces\obj\Debug\net6.0\Interfaces.csproj.CoreCompileInputs.cache
+D:\Trainings\JkJan23\Day3\Interfaces\obj\Debug\net6.0\Interfaces.dll
+D:\Trainings\JkJan23\Day3\Interfaces\obj\Debug\net6.0\refint\Interfaces.dll
+D:\Trainings\JkJan23\Day3\Interfaces\obj\Debug\net6.0\Interfaces.pdb
+D:\Trainings\JkJan23\Day3\Interfaces\obj\Debug\net6.0\Interfaces.genruntimeconfig.cache
+D:\Trainings\JkJan23\Day3\Interfaces\obj\Debug\net6.0\ref\Interfaces.dll

@@ -1,0 +1,15 @@
+D:\Trainings\JkJan23\Day4\DefaultImplemntationInterfaces\bin\Debug\net6.0\DefaultImplemntationInterfaces.exe
+D:\Trainings\JkJan23\Day4\DefaultImplemntationInterfaces\bin\Debug\net6.0\DefaultImplemntationInterfaces.deps.json
+D:\Trainings\JkJan23\Day4\DefaultImplemntationInterfaces\bin\Debug\net6.0\DefaultImplemntationInterfaces.runtimeconfig.json
+D:\Trainings\JkJan23\Day4\DefaultImplemntationInterfaces\bin\Debug\net6.0\DefaultImplemntationInterfaces.dll
+D:\Trainings\JkJan23\Day4\DefaultImplemntationInterfaces\bin\Debug\net6.0\DefaultImplemntationInterfaces.pdb
+D:\Trainings\JkJan23\Day4\DefaultImplemntationInterfaces\obj\Debug\net6.0\DefaultImplemntationInterfaces.csproj.AssemblyReference.cache
+D:\Trainings\JkJan23\Day4\DefaultImplemntationInterfaces\obj\Debug\net6.0\DefaultImplemntationInterfaces.GeneratedMSBuildEditorConfig.editorconfig
+D:\Trainings\JkJan23\Day4\DefaultImplemntationInterfaces\obj\Debug\net6.0\DefaultImplemntationInterfaces.AssemblyInfoInputs.cache
+D:\Trainings\JkJan23\Day4\DefaultImplemntationInterfaces\obj\Debug\net6.0\DefaultImplemntationInterfaces.AssemblyInfo.cs
+D:\Trainings\JkJan23\Day4\DefaultImplemntationInterfaces\obj\Debug\net6.0\DefaultImplemntationInterfaces.csproj.CoreCompileInputs.cache
+D:\Trainings\JkJan23\Day4\DefaultImplemntationInterfaces\obj\Debug\net6.0\DefaultImplemntationInterfaces.dll
+D:\Trainings\JkJan23\Day4\DefaultImplemntationInterfaces\obj\Debug\net6.0\refint\DefaultImplemntationInterfaces.dll
+D:\Trainings\JkJan23\Day4\DefaultImplemntationInterfaces\obj\Debug\net6.0\DefaultImplemntationInterfaces.pdb
+D:\Trainings\JkJan23\Day4\DefaultImplemntationInterfaces\obj\Debug\net6.0\DefaultImplemntationInterfaces.genruntimeconfig.cache
+D:\Trainings\JkJan23\Day4\DefaultImplemntationInterfaces\obj\Debug\net6.0\ref\DefaultImplemntationInterfaces.dll

@@ -1,0 +1,15 @@
+D:\Trainings\JkJan23\Day3\InheritanceExamples\bin\Debug\net6.0\InheritanceExamples.exe
+D:\Trainings\JkJan23\Day3\InheritanceExamples\bin\Debug\net6.0\InheritanceExamples.deps.json
+D:\Trainings\JkJan23\Day3\InheritanceExamples\bin\Debug\net6.0\InheritanceExamples.runtimeconfig.json
+D:\Trainings\JkJan23\Day3\InheritanceExamples\bin\Debug\net6.0\InheritanceExamples.dll
+D:\Trainings\JkJan23\Day3\InheritanceExamples\bin\Debug\net6.0\InheritanceExamples.pdb
+D:\Trainings\JkJan23\Day3\InheritanceExamples\obj\Debug\net6.0\InheritanceExamples.csproj.AssemblyReference.cache
+D:\Trainings\JkJan23\Day3\InheritanceExamples\obj\Debug\net6.0\InheritanceExamples.GeneratedMSBuildEditorConfig.editorconfig
+D:\Trainings\JkJan23\Day3\InheritanceExamples\obj\Debug\net6.0\InheritanceExamples.AssemblyInfoInputs.cache
+D:\Trainings\JkJan23\Day3\InheritanceExamples\obj\Debug\net6.0\InheritanceExamples.AssemblyInfo.cs
+D:\Trainings\JkJan23\Day3\InheritanceExamples\obj\Debug\net6.0\InheritanceExamples.csproj.CoreCompileInputs.cache
+D:\Trainings\JkJan23\Day3\InheritanceExamples\obj\Debug\net6.0\InheritanceExamples.dll
+D:\Trainings\JkJan23\Day3\InheritanceExamples\obj\Debug\net6.0\refint\InheritanceExamples.dll
+D:\Trainings\JkJan23\Day3\InheritanceExamples\obj\Debug\net6.0\InheritanceExamples.pdb
+D:\Trainings\JkJan23\Day3\InheritanceExamples\obj\Debug\net6.0\InheritanceExamples.genruntimeconfig.cache
+D:\Trainings\JkJan23\Day3\InheritanceExamples\obj\Debug\net6.0\ref\InheritanceExamples.dll

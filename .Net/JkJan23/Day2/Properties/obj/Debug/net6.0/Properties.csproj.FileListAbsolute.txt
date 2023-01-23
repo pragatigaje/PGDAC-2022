@@ -1,0 +1,15 @@
+D:\Trainings\JkJan23\Day2\Properties\bin\Debug\net6.0\Properties.exe
+D:\Trainings\JkJan23\Day2\Properties\bin\Debug\net6.0\Properties.deps.json
+D:\Trainings\JkJan23\Day2\Properties\bin\Debug\net6.0\Properties.runtimeconfig.json
+D:\Trainings\JkJan23\Day2\Properties\bin\Debug\net6.0\Properties.dll
+D:\Trainings\JkJan23\Day2\Properties\bin\Debug\net6.0\Properties.pdb
+D:\Trainings\JkJan23\Day2\Properties\obj\Debug\net6.0\Properties.csproj.AssemblyReference.cache
+D:\Trainings\JkJan23\Day2\Properties\obj\Debug\net6.0\Properties.GeneratedMSBuildEditorConfig.editorconfig
+D:\Trainings\JkJan23\Day2\Properties\obj\Debug\net6.0\Properties.AssemblyInfoInputs.cache
+D:\Trainings\JkJan23\Day2\Properties\obj\Debug\net6.0\Properties.AssemblyInfo.cs
+D:\Trainings\JkJan23\Day2\Properties\obj\Debug\net6.0\Properties.csproj.CoreCompileInputs.cache
+D:\Trainings\JkJan23\Day2\Properties\obj\Debug\net6.0\Properties.dll
+D:\Trainings\JkJan23\Day2\Properties\obj\Debug\net6.0\refint\Properties.dll
+D:\Trainings\JkJan23\Day2\Properties\obj\Debug\net6.0\Properties.pdb
+D:\Trainings\JkJan23\Day2\Properties\obj\Debug\net6.0\Properties.genruntimeconfig.cache
+D:\Trainings\JkJan23\Day2\Properties\obj\Debug\net6.0\ref\Properties.dll

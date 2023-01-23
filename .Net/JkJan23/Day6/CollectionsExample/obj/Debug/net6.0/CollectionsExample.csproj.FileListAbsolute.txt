@@ -1,0 +1,15 @@
+D:\Trainings\JkJan23\Day6\CollectionsExample\bin\Debug\net6.0\CollectionsExample.exe
+D:\Trainings\JkJan23\Day6\CollectionsExample\bin\Debug\net6.0\CollectionsExample.deps.json
+D:\Trainings\JkJan23\Day6\CollectionsExample\bin\Debug\net6.0\CollectionsExample.runtimeconfig.json
+D:\Trainings\JkJan23\Day6\CollectionsExample\bin\Debug\net6.0\CollectionsExample.dll
+D:\Trainings\JkJan23\Day6\CollectionsExample\bin\Debug\net6.0\CollectionsExample.pdb
+D:\Trainings\JkJan23\Day6\CollectionsExample\obj\Debug\net6.0\CollectionsExample.csproj.AssemblyReference.cache
+D:\Trainings\JkJan23\Day6\CollectionsExample\obj\Debug\net6.0\CollectionsExample.GeneratedMSBuildEditorConfig.editorconfig
+D:\Trainings\JkJan23\Day6\CollectionsExample\obj\Debug\net6.0\CollectionsExample.AssemblyInfoInputs.cache
+D:\Trainings\JkJan23\Day6\CollectionsExample\obj\Debug\net6.0\CollectionsExample.AssemblyInfo.cs
+D:\Trainings\JkJan23\Day6\CollectionsExample\obj\Debug\net6.0\CollectionsExample.csproj.CoreCompileInputs.cache
+D:\Trainings\JkJan23\Day6\CollectionsExample\obj\Debug\net6.0\CollectionsExample.dll
+D:\Trainings\JkJan23\Day6\CollectionsExample\obj\Debug\net6.0\refint\CollectionsExample.dll
+D:\Trainings\JkJan23\Day6\CollectionsExample\obj\Debug\net6.0\CollectionsExample.pdb
+D:\Trainings\JkJan23\Day6\CollectionsExample\obj\Debug\net6.0\CollectionsExample.genruntimeconfig.cache
+D:\Trainings\JkJan23\Day6\CollectionsExample\obj\Debug\net6.0\ref\CollectionsExample.dll

@@ -1,0 +1,15 @@
+D:\Trainings\JkJan23\Day9\LinqExample\bin\Debug\net6.0\LinqExample.exe
+D:\Trainings\JkJan23\Day9\LinqExample\bin\Debug\net6.0\LinqExample.deps.json
+D:\Trainings\JkJan23\Day9\LinqExample\bin\Debug\net6.0\LinqExample.runtimeconfig.json
+D:\Trainings\JkJan23\Day9\LinqExample\bin\Debug\net6.0\LinqExample.dll
+D:\Trainings\JkJan23\Day9\LinqExample\bin\Debug\net6.0\LinqExample.pdb
+D:\Trainings\JkJan23\Day9\LinqExample\obj\Debug\net6.0\LinqExample.csproj.AssemblyReference.cache
+D:\Trainings\JkJan23\Day9\LinqExample\obj\Debug\net6.0\LinqExample.GeneratedMSBuildEditorConfig.editorconfig
+D:\Trainings\JkJan23\Day9\LinqExample\obj\Debug\net6.0\LinqExample.AssemblyInfoInputs.cache
+D:\Trainings\JkJan23\Day9\LinqExample\obj\Debug\net6.0\LinqExample.AssemblyInfo.cs
+D:\Trainings\JkJan23\Day9\LinqExample\obj\Debug\net6.0\LinqExample.csproj.CoreCompileInputs.cache
+D:\Trainings\JkJan23\Day9\LinqExample\obj\Debug\net6.0\LinqExample.dll
+D:\Trainings\JkJan23\Day9\LinqExample\obj\Debug\net6.0\refint\LinqExample.dll
+D:\Trainings\JkJan23\Day9\LinqExample\obj\Debug\net6.0\LinqExample.pdb
+D:\Trainings\JkJan23\Day9\LinqExample\obj\Debug\net6.0\LinqExample.genruntimeconfig.cache
+D:\Trainings\JkJan23\Day9\LinqExample\obj\Debug\net6.0\ref\LinqExample.dll

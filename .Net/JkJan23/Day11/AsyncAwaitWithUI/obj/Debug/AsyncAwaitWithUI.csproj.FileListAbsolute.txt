@@ -1,0 +1,10 @@
+D:\Trainings\JKJuly22\Day10\AsyncAwaitWithUI\bin\Debug\AsyncAwaitWithUI.exe.config
+D:\Trainings\JKJuly22\Day10\AsyncAwaitWithUI\bin\Debug\AsyncAwaitWithUI.exe
+D:\Trainings\JKJuly22\Day10\AsyncAwaitWithUI\bin\Debug\AsyncAwaitWithUI.pdb
+D:\Trainings\JKJuly22\Day10\AsyncAwaitWithUI\obj\Debug\AsyncAwaitWithUI.csproj.AssemblyReference.cache
+D:\Trainings\JKJuly22\Day10\AsyncAwaitWithUI\obj\Debug\AsyncAwaitWithUI.Form1.resources
+D:\Trainings\JKJuly22\Day10\AsyncAwaitWithUI\obj\Debug\AsyncAwaitWithUI.Properties.Resources.resources
+D:\Trainings\JKJuly22\Day10\AsyncAwaitWithUI\obj\Debug\AsyncAwaitWithUI.csproj.GenerateResource.cache
+D:\Trainings\JKJuly22\Day10\AsyncAwaitWithUI\obj\Debug\AsyncAwaitWithUI.csproj.CoreCompileInputs.cache
+D:\Trainings\JKJuly22\Day10\AsyncAwaitWithUI\obj\Debug\AsyncAwaitWithUI.exe
+D:\Trainings\JKJuly22\Day10\AsyncAwaitWithUI\obj\Debug\AsyncAwaitWithUI.pdb

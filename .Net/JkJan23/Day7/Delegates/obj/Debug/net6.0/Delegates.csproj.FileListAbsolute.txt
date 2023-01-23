@@ -1,0 +1,15 @@
+D:\Trainings\JkJan23\Day7\Delegates\bin\Debug\net6.0\Delegates.exe
+D:\Trainings\JkJan23\Day7\Delegates\bin\Debug\net6.0\Delegates.deps.json
+D:\Trainings\JkJan23\Day7\Delegates\bin\Debug\net6.0\Delegates.runtimeconfig.json
+D:\Trainings\JkJan23\Day7\Delegates\bin\Debug\net6.0\Delegates.dll
+D:\Trainings\JkJan23\Day7\Delegates\bin\Debug\net6.0\Delegates.pdb
+D:\Trainings\JkJan23\Day7\Delegates\obj\Debug\net6.0\Delegates.csproj.AssemblyReference.cache
+D:\Trainings\JkJan23\Day7\Delegates\obj\Debug\net6.0\Delegates.GeneratedMSBuildEditorConfig.editorconfig
+D:\Trainings\JkJan23\Day7\Delegates\obj\Debug\net6.0\Delegates.AssemblyInfoInputs.cache
+D:\Trainings\JkJan23\Day7\Delegates\obj\Debug\net6.0\Delegates.AssemblyInfo.cs
+D:\Trainings\JkJan23\Day7\Delegates\obj\Debug\net6.0\Delegates.csproj.CoreCompileInputs.cache
+D:\Trainings\JkJan23\Day7\Delegates\obj\Debug\net6.0\Delegates.dll
+D:\Trainings\JkJan23\Day7\Delegates\obj\Debug\net6.0\refint\Delegates.dll
+D:\Trainings\JkJan23\Day7\Delegates\obj\Debug\net6.0\Delegates.pdb
+D:\Trainings\JkJan23\Day7\Delegates\obj\Debug\net6.0\Delegates.genruntimeconfig.cache
+D:\Trainings\JkJan23\Day7\Delegates\obj\Debug\net6.0\ref\Delegates.dll
