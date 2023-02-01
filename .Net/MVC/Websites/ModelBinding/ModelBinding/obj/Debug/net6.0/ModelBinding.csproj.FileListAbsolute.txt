@@ -245,3 +245,9 @@ C:\Users\HP\Desktop\DAC-SEP-22\.Net\MVC\Websites\ModelBinding\ModelBinding\obj\D
 C:\Users\HP\Desktop\DAC-SEP-22\.Net\MVC\Websites\ModelBinding\ModelBinding\obj\Debug\net6.0\ModelBinding.pdb
 C:\Users\HP\Desktop\DAC-SEP-22\.Net\MVC\Websites\ModelBinding\ModelBinding\obj\Debug\net6.0\ModelBinding.genruntimeconfig.cache
 C:\Users\HP\Desktop\DAC-SEP-22\.Net\MVC\Websites\ModelBinding\ModelBinding\obj\Debug\net6.0\ref\ModelBinding.dll
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\MVC\Websites\ModelBinding\ModelBinding\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\MVC\Websites\ModelBinding\ModelBinding\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\MVC\Websites\ModelBinding\ModelBinding\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\MVC\Websites\ModelBinding\ModelBinding\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\MVC\Websites\ModelBinding\ModelBinding\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\HP\Desktop\DAC-SEP-22\.Net\MVC\Websites\ModelBinding\ModelBinding\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

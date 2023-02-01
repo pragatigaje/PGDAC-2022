@@ -1,0 +1,45 @@
+//Donor Table
+
+CREATE TABLE [dbo].[donor] (
+    [Id]         INT          NOT NULL,
+    [username]   VARCHAR (50) NOT NULL,
+    [name]       VARCHAR (50) NOT NULL,
+    [password]   VARCHAR (50) NOT NULL,
+    [gender]     VARCHAR (50) NOT NULL,
+    [email]      VARCHAR (30) NOT NULL,
+    [cityid]     INT          NOT NULL,
+    [phone]      VARCHAR (10) NOT NULL,
+    [bloodgroup] VARCHAR (5)  NOT NULL,
+    [dob]        DATE         NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [FK_donor_ToTable] FOREIGN KEY ([cityid]) REFERENCES [dbo].[city] ([cityid])
+);
+
+
+CREATE TABLE [dbo].[city] (
+    [cityid] INT          NOT NULL,
+    [city]   VARCHAR (20) NOT NULL,
+    [state]  VARCHAR (20) NOT NULL,
+    PRIMARY KEY CLUSTERED ([cityid] ASC)
+);
+
+
+//Db first approach
+
+1. Add Nuget Packages - use version 6.x
+Microsoft.EntityFrameworkCore
+Microsoft.EntityFrameworkCore.SqlServer
+Microsoft.EntityFrameworkCore.Tools
+
+2. Package Manager Console
+ Scaffold-DbContext "Data Source=(localdb)\MsSqlLocalDb;Initial Catalog=DotNetProject;Integrated Security=true" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+3.Add EF service in Program.cs 
+builder.Services.AddDbContext<DotNetProjectContext>(options =>                       options.UseSqlServer(builder.Configuration.GetConnectionString("DotNetProjectContext")));
+
+4. Specify connection string in appsettings.json
+"ConnectionStrings": {
+    "DotNetProjectContext": "Data Source=(localdb)\\MsSqlLocalDb;Initial Catalog=DotNetProject;Integrated Security=true;MultipleActiveResultSets=true"
+  }
+
+5.Add controller using entity framework

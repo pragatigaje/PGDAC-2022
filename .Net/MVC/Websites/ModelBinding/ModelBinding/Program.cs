@@ -24,7 +24,7 @@ namespace ModelBinding
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Employees}/{action=index}/{id?}");
 
             app.Run();
         }

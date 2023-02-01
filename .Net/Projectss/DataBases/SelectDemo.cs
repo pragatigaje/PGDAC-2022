@@ -59,7 +59,6 @@ namespace DataBases
                 cn.Close();
             }
         }
-
         public static void MultipleValues()
         {
             SqlConnection cn = new SqlConnection();

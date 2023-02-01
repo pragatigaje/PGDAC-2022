@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using System.Data;
+using System.Data.SqlClient;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ModelBinding.Models;
 
@@ -9,38 +11,37 @@ namespace ModelBinding.Controllers
         // GET: EmployeesController
         public ActionResult Index()
         {
-            return View();
+            List<Employee> emplist = Employee.GetAlEmployees();
+            return View(emplist);
         }
 
         // GET: EmployeesController/Details/5
         public ActionResult Details(int id)
         {
-           Employee obj = new Employee();
-           obj.EmpNo = 1;
-            obj.Name= "Pragati";
-            obj.Basic = 4000;   
-            obj.DeptNo= 2;
-
-            return View(obj);
+            Employee obj = Employee.GetSingleEmployee(id);
+           return View(obj);
         }
 
         // GET: EmployeesController/Create
         public ActionResult Create()
         {
+
             return View();
         }
 
         // POST: EmployeesController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(Employee obj)
         {
             try
             {
+                Employee.InsertEmployee(obj);
                 return RedirectToAction(nameof(Index));
             }
-            catch
+            catch(Exception ex)
             {
+                ViewBag.message = ex.Message;
                 return View();
             }
         }
@@ -48,16 +49,18 @@ namespace ModelBinding.Controllers
         // GET: EmployeesController/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            Employee emp = Employee.GetSingleEmployee(id);
+            return View(emp);
         }
 
         // POST: EmployeesController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(int id, Employee obj)
         {
             try
             {
+                Employee.UpdateEmployee(obj);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -69,7 +72,8 @@ namespace ModelBinding.Controllers
         // GET: EmployeesController/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            Employee obj = Employee.GetSingleEmployee(id);
+            return View(obj);
         }
 
         // POST: EmployeesController/Delete/5
@@ -79,6 +83,7 @@ namespace ModelBinding.Controllers
         {
             try
             {
+                Employee.DeleteEmployee(id);
                 return RedirectToAction(nameof(Index));
             }
             catch
